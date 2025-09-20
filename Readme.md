@@ -1,4 +1,4 @@
-# 🎣 Simulateur de Phishing Éducatif
+# 🎣 Système de Phishing SelfHosted
 
 <div align="center">
 
