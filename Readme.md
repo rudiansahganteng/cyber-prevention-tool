@@ -14,83 +14,43 @@
 
 ---
 
-## ⚠️ AVERTISSEMENT — USAGE ÉTHIQUE UNIQUEMENT
+# Security Awareness Platform — Self-Hosted (Éthique)
 
-> **🚨 IMPORTANT** : Cette application est exclusivement destinée à la **formation en cybersécurité** au sein d'entreprises. L'utilisation malveillante ou non autorisée est strictement interdite et peut être illégale.
+## Description
 
-### ✅ Usages autorisés
+Cette plateforme open-source permet aux entreprises de former et sensibiliser leurs employés à la sécurité informatique. Elle est conçue pour fonctionner en **self-hosted**, avec une interface web pour gérer des modules pédagogiques, des campagnes de simulation et des rapports.
 
-* Formation interne d'employés à la détection de phishing
-* Sensibilisation à la cybersécurité en entreprise
-* Tests de sécurité avec accord écrit de la direction
-* Recherche académique en cybersécurité
+L’objectif principal est **éducatif** et **contrôlé** : toutes les campagnes et simulations doivent être validées par les équipes sécurité et RH avant diffusion.
 
-### ❌ Usages interdits
-
-* Attaques réelles de phishing
-* Collecte non autorisée de données
-* Usage en dehors du cadre éducatif/professionnel
-* Distribution publique des templates
+Cette plateforme utilise :  
+- **Gemmini** comme API pour gérer les modules, campagnes, utilisateurs, utilisé aussi pour générer automatiquement des contenus pédagogiques, fiches de formation et rapports, tout en restant dans un cadre sûr et légal.  
 
 ---
 
-## 📋 Vue d'ensemble
+## Fonctionnalités
 
-Le **Simulateur de Phishing Éducatif** est une plateforme complète permettant aux équipes de sécurité de créer, lancer et analyser des campagnes de simulation de phishing à des fins de formation.
-
-### 🎯 Objectifs
-
-* **Sensibiliser** les employés aux techniques de phishing
-* **Mesurer** le niveau de vigilance de l'organisation
-* **Former** automatiquement les utilisateurs qui cliquent
-* **Analyser** les résultats avec des rapports détaillés
-
-### ✨ Fonctionnalités principales
-
-| 🔧 **Administration**              | 📊 **Analytics**        | 🎓 **Formation**                 |
-| ---------------------------------- | ----------------------- | -------------------------------- |
-| Interface de création de campagnes | Dashboard temps réel    | Module de formation automatique  |
-| Bibliothèque de templates          | Statistiques détaillées | Pages éducatives interactives    |
-| Gestion des cibles                 | Tracking invisible      | Notifications de sensibilisation |
-| Planification d'envoi              | Exports de rapports     | Ressources pédagogiques          |
-
-### 🏗️ Architecture technique
-
-```mermaid
-graph TB
-    subgraph "Frontend (React)"
-        A[Dashboard Admin] --> B[Gestion Campagnes]
-        B --> C[Templates d'emails]
-        C --> D[Rapports & Stats]
-    end
-    
-    subgraph "Backend (Node.js)"
-        E[API REST] --> F[Service Email]
-        F --> G[Tracking]
-        G --> H[Base de données]
-    end
-    
-    subgraph "Infrastructure"
-        I[PostgreSQL] --> J[Redis Cache]
-        J --> K[SMTP Service]
-        K --> L[Docker Containers]
-    end
-    
-    A --> E
-    H --> I
-```
+- Gestion des utilisateurs et des rôles (Admin, Reviewer, RH, Employé)
+- Création et gestion de modules de formation interactifs
+- Simulation de scénarios pédagogiques anonymisés (aucune donnée personnelle réelle)
+- Génération automatique de fiches pédagogiques et recommandations via Claude.ai
+- Tableau de bord pour visualiser les KPIs et l’amélioration des performances
+- Export des rapports anonymisés pour suivi et audits internes
 
 ---
 
-## 🚀 Installation
+## Principes Éthiques et Sécurité
 
-### 📋 Prérequis
+1. **Consentement et approbation** : Toutes les campagnes doivent être validées par le responsable sécurité et RH.  
+2. **Aucune donnée sensible** : Ne pas collecter de mots de passe, identifiants ou informations confidentielles.  
+3. **Anonymisation** : Toutes les métriques et logs doivent être anonymisés ou pseudonymisés.  
+4. **Mode sandbox** : Possibilité de tester la plateforme sans envoyer de communications réelles.  
+5. **RGPD & conformité** : Conserver uniquement les données nécessaires et permettre l’accès/suppression selon la législation.
 
-| Composant              | Version minimale | Recommandée |
-| ---------------------- | ---------------- | ----------- |
-| **Node.js**            | 18.0+            | 20.0+       |
-| **npm**                | 8.0+             | 10.0+       |
-| **PostgreSQL**         | 14.0+            | 15.0+       |
-| **Git**                | 2.0+             | Dernière    |
-| **Docker** (optionnel) | 20.0+            | Dernière    |
+---
 
+## Installation (Self-Hosted)
+
+1. Cloner le repository :  
+   ```bash
+   git clone https://github.com/ton-org/security-awareness-platform.git
+   cd security-awareness-platform
