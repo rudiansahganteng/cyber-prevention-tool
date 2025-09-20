@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhishGuard Pro - Formation Anti-Phishing Self-Hosted</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>EPIDEF - Association Géopolitique et Défense</title>
+	<meta name="description" content="EPIDEF - Association Epitéenne axé sur les sujets Défense et Géopolitique.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a2332;
-            --secondary: #2563eb;
-            --accent: #f59e0b;
-            --danger: #dc2626;
-            --success: #059669;
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-dark: linear-gradient(135deg, #1a2332 0%, #2563eb 100%);
-            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --primary-navy: #0B1426;
+            --primary-blue: #1E40AF;
+            --accent-gold: #F59E0B;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --surface-white: #FFFFFF;
+            --surface-light: #F9FAFB;
+            --border-light: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, #0B1426 0%, #1E40AF 100%);
+            --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
         }
 
         * {
@@ -26,73 +27,75 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #334155;
-            overflow-x: hidden;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--surface-white);
+            font-weight: 400;
         }
 
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .nav {
+        .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 0 32px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        nav {
             height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
+            font-size: 28px;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--primary-navy);
             text-decoration: none;
-        }
-
-        .logo i {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-right: 0.5rem;
-            font-size: 2rem;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 48px;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--primary);
+            color: var(--text-secondary);
             font-weight: 500;
-            transition: all 0.3s ease;
+            font-size: 15px;
+            transition: color 0.3s ease;
             position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
             width: 0;
             height: 2px;
-            background: var(--secondary);
+            bottom: -8px;
+            left: 0;
+            background: var(--gradient-accent);
             transition: width 0.3s ease;
         }
 
@@ -100,27 +103,29 @@
             width: 100%;
         }
 
-        .cta-nav {
+        .nav-cta {
             background: var(--gradient-primary);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 14px;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow-soft);
+            border: none;
+            cursor: pointer;
         }
 
-        .cta-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.25);
         }
 
         /* Hero Section */
         .hero {
-            background: var(--gradient-dark);
+            background: var(--gradient-primary);
             color: white;
-            padding: 140px 0 100px;
+            padding: 160px 0 120px;
             position: relative;
             overflow: hidden;
         }
@@ -132,774 +137,893 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
-            opacity: 0.5;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(245,158,11,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(245,158,11,0);stop-opacity:0" /></radialGradient></defs><circle cx="200" cy="300" r="200" fill="url(%23grad)"/><circle cx="800" cy="700" r="150" fill="url(%23grad)"/></svg>') no-repeat;
+            background-size: cover;
+            opacity: 0.6;
         }
 
         .hero-content {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
             position: relative;
             z-index: 2;
+            max-width: 800px;
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        .hero-badge {
+            display: inline-flex;
             align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            backdrop-filter: blur(10px);
         }
 
-        .hero-text h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
         }
 
-        .hero-text .highlight {
-            background: linear-gradient(45deg, #f59e0b, #dc2626);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
 
-        .hero-text p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
+        .hero-description {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 48px;
             line-height: 1.6;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 16px;
             flex-wrap: wrap;
         }
 
         .btn-primary {
-            background: var(--accent);
-            color: var(--primary);
-            padding: 1rem 2rem;
-            border-radius: 50px;
+            background: var(--gradient-accent);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-medium);
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-large);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(245, 158, 11, 0.3);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
+            background: transparent;
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
+            padding: 16px 32px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 16px;
             transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .hero-visual {
-            position: relative;
-        }
-
-        .dashboard-preview {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: var(--shadow-large);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
-        .preview-header {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
+        /* Main Content */
+        .main-content {
+            background: var(--surface-white);
+            position: relative;
+            z-index: 10;
         }
 
-        .preview-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+        .section {
+            padding: 120px 0;
         }
 
-        .preview-dot:nth-child(1) { background: #dc2626; }
-        .preview-dot:nth-child(2) { background: #f59e0b; }
-        .preview-dot:nth-child(3) { background: #059669; }
-
-        .preview-content {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            padding: 1.5rem;
-            color: var(--primary);
-        }
-
-        .preview-metrics {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .metric {
+        .section-header {
             text-align: center;
-            padding: 1rem;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto 80px;
         }
 
-        .metric-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .metric-label {
-            font-size: 0.75rem;
-            color: #64748b;
+        .section-badge {
+            display: inline-block;
+            background: var(--gradient-accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: white;
-            padding: 100px 0;
-        }
-
-        .stats-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            text-align: center;
-        }
-
-        .stats-title {
-            font-size: 2.5rem;
+        .section h2 {
+            font-size: 48px;
             font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            line-height: 1.2;
         }
 
-        .stats-grid {
+        .section-description {
+            font-size: 20px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Mission Section */
+        .mission {
+            background: var(--surface-light);
+        }
+
+        .mission-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
         }
 
-        .stat-card {
+        .mission-text h3 {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .mission-text p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .mission-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 24px;
             background: white;
-            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Activities Section */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 80px;
+        }
+
+        .activity-card {
+            background: white;
+            padding: 40px 32px;
             border-radius: 20px;
-            box-shadow: var(--shadow-medium);
-            border: 1px solid #f1f5f9;
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            border: 1px solid var(--border-light);
             position: relative;
             overflow: hidden;
         }
 
-        .stat-card::before {
+        .activity-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .activity-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .activity-icon {
+            width: 64px;
+            height: 64px;
             background: var(--gradient-primary);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-large);
-        }
-
-        .stat-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-description {
-            color: #64748b;
-            font-weight: 500;
-        }
-
-        /* Features Section */
-        .features-section {
-            background: #f8fafc;
-            padding: 100px 0;
-        }
-
-        .features-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.25rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-soft);
-            border: 1px solid #f1f5f9;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 15px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
+        }
+
+        .activity-icon svg {
+            width: 28px;
+            height: 28px;
             color: white;
-            font-size: 1.5rem;
         }
 
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
+        .activity-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            line-height: 1.3;
         }
 
-        .feature-description {
-            color: #64748b;
+        .activity-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
             line-height: 1.6;
         }
 
-        /* Process Section */
-        .process-section {
-            background: white;
-            padding: 100px 0;
-        }
-
-        .process-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .process-step {
+        .accessibility-note {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border: 2px solid #BFDBFE;
+            border-radius: 16px;
+            padding: 32px;
             text-align: center;
-            position: relative;
+            margin-top: 48px;
         }
 
-        .process-step::after {
-            content: '';
-            position: absolute;
-            top: 30px;
-            right: -1rem;
-            width: 2rem;
-            height: 2px;
-            background: var(--secondary);
-            opacity: 0.3;
+        .accessibility-note h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
         }
 
-        .process-step:last-child::after {
-            display: none;
+        .accessibility-note p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
 
-        .process-number {
-            width: 60px;
-            height: 60px;
+        /* Team Section */
+        .team {
+            background: var(--surface-light);
+        }
+
+        .positions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 80px;
+        }
+
+        .position-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid var(--border-light);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .position-card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(30, 64, 175, 0.1);
+        }
+
+        .position-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .position-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .member-cta {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border: 2px solid #BFDBFE;
+            border-radius: 20px;
+            padding: 48px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .member-cta h3 {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .member-cta p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        /* Contact Section */
+        .contact {
             background: var(--gradient-primary);
             color: white;
-            border-radius: 50%;
+            text-align: center;
+        }
+
+        .contact .section-badge {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent-gold);
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .contact-option {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-option:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(245, 158, 11, 0.5);
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-accent);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-        }
-
-        .process-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .process-description {
-            color: #64748b;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--gradient-dark);
+            margin: 0 auto 24px;
             color: white;
-            padding: 100px 0;
+        }
+
+        .contact-option h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .contact-option p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .contact-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        .contact-footer {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
             text-align: center;
         }
 
-        .cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-description {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-buttons {
+        .email-highlight {
             display: flex;
-            gap: 1rem;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .email-highlight svg {
+            color: var(--accent-gold);
+        }
+
+        .email-highlight h4 {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .email-highlight a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .email-highlight a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-footer p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         /* Footer */
-        .footer {
-            background: var(--primary);
+        footer {
+            background: var(--primary-navy);
             color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            padding: 48px 0;
+            text-align: center;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-brand p {
-            opacity: 0.8;
-            margin-bottom: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 32px;
+            text-align: left;
         }
 
         .footer-section h4 {
-            font-size: 1.125rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section ul li a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section ul li a:hover {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
             color: white;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            line-height: 1.6;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+            transform: translateX(4px);
         }
 
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
+            padding-top: 32px;
             text-align: center;
-            opacity: 0.8;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
             .nav-links {
                 display: none;
             }
 
-            .hero-grid {
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section h2 {
+                font-size: 36px;
+            }
+
+            .mission-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 48px;
             }
 
-            .hero-text {
-                text-align: center;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process-step::after {
-                display: none;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .hero-buttons,
-            .cta-buttons {
+            .hero-buttons {
                 flex-direction: column;
-                align-items: center;
             }
-        }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                justify-content: center;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="logo">
-                <i class="fas fa-shield-alt"></i>
-                PhishGuard Pro
-            </a>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">EPIDEF</a>
+            <ul class="nav-links">
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#activites">Activités</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn-primary">
+                        Contacter Epidef
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h1>
-                        Protégez votre entreprise du 
-                        <span class="highlight">phishing</span>
-                        avec une formation intelligente
-                    </h1>
-                    <p>
-                        Solution self-hosted de simulation et formation anti-phishing. 
-                        Testez, formez et mesurez la vigilance de vos équipes en toute sécurité.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#demo" class="btn-primary">
-                            <i class="fas fa-play-circle"></i> Voir la démo
-                        </a>
-                        <a href="#features" class="btn-secondary">
-                            <i class="fas fa-info-circle"></i> En savoir plus
-                        </a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Association • Sensibilisation • Géopolitique & Défense
+                </div>
+                <h1>EPIDEF</h1>
+                <div class="hero-subtitle">Comprendre les enjeux de demain</div>
+                <p class="hero-description">
+                    Une association ouverte à tous pour démocratiser la géopolitique et les enjeux de défense. Rejoignez-nous pour mieux comprendre le monde qui nous entoure, quel que soit votre niveau.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">
+                        Rejoindre EPIDEF
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#mission" class="btn-secondary">
+                        Découvrir notre mission
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 12L16 12M16 12L12 8M16 12L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section id="mission" class="section mission">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <div class="section-badge">Notre Mission</div>
+                        <h3>Démocratiser les enjeux géopolitiques et de défense</h3>
+                        <p>
+                            Dans un monde en perpétuelle évolution, les questions géopolitiques et de défense nous concernent tous. EPIDEF rend ces sujets complexes accessibles à chacun, peu importe votre niveau de départ.
+                        </p>
+                        <p>
+                            Notre objectif : créer un espace d'échange et d'apprentissage ouvert, où la curiosité prime sur les prérequis, et où chaque participant peut enrichir sa compréhension du monde contemporain.
+                        </p>
+                    </div>
+                    <div class="mission-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">Tous</div>
+                            <div class="stat-label">Niveaux Bienvenus</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">0€</div>
+                            <div class="stat-label">Adhésion Gratuite</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Curiosité Requise</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Accessible</div>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="dashboard-preview">
-                        <div class="preview-header">
-                            <div class="preview-dot"></div>
-                            <div class="preview-dot"></div>
-                            <div class="preview-dot"></div>
+            </div>
+        </section>
+
+        <section id="activites" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Nos Activités</div>
+                    <h2>Apprendre ensemble, à votre rythme</h2>
+                    <p class="section-description">
+                        Découvrez les enjeux géopolitiques et de défense à travers des activités variées, pensées pour être accessibles à tous, débutants comme passionnés confirmés.
+                    </p>
+                </div>
+                
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19ZM7 10V12H9V10H7ZM11 10V12H13V10H11ZM15 10V12H17V10H15ZM7 14V16H9V14H7ZM11 14V16H13V14H11ZM15 14V16H17V14H15Z" fill="currentColor"/>
+                            </svg>
                         </div>
-                        <div class="preview-content">
-                            <div class="preview-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">87%</div>
-                                    <div class="metric-label">Taux de détection</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">-65%</div>
-                                    <div class="metric-label">Incidents</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">350</div>
-                                    <div class="metric-label">Employés formés</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">24</div>
-                                    <div class="metric-label">Campagnes actives</div>
-                                </div>
+                        <h3>Conférences Accessibles</h3>
+                        <p>Des conférences ouvertes à tous animées par des experts qui savent vulgariser : universitaires, journalistes, anciens militaires et diplomates qui rendent les sujets complexes compréhensibles.</p>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 4C18.2091 4 20 5.79086 20 8C20 10.2091 18.2091 12 16 12C13.7909 12 12 10.2091 12 8C12 5.79086 13.7909 4 16 4ZM8 12C10.2091 12 12 13.7909 12 16C12 18.2091 10.2091 20 8 20C5.79086 20 4 18.2091 4 16C4 13.7909 5.79086 12 8 12Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Discussions Participatives</h3>
+                        <p>Sessions de discussion ouvertes où chacun peut poser ses questions et partager ses réflexions. Pas de jugement, juste l'envie commune de mieux comprendre les enjeux actuels.</p>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L3 9V22H9V16H15V22H21V9L12 2ZM19 20H17V14H7V20H5V10L12 4.5L19 10V20Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Visites Découvertes</h3>
+                        <p>Visites guidées de lieux d'intérêt : musées militaires, mémoriaux, et éventuellement écoles militaires pour découvrir concrètement l'histoire et les enjeux de défense.</p>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Ressources Pédagogiques</h3>
+                        <p>Articles, synthèses et analyses rédigés dans un langage clair, avec des explications de base pour que tout le monde puisse suivre et approfondir selon ses intérêts.</p>
+                    </div>
+                </div>
+
+                <div class="accessibility-note">
+                    <h3>📚 Aucun Prérequis Nécessaire</h3>
+                    <p>
+                        Que vous soyez étudiant, professionnel, retraité, ou simplement curieux, nos événements sont conçus pour être compréhensibles par tous. Les concepts complexes sont toujours expliqués et contextualisés.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe" class="section team">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Rejoindre l'équipe</div>
+                    <h2>Construisons EPIDEF ensemble</h2>
+                    <p class="section-description">
+                        EPIDEF cherche des personnes motivées pour l'aider à grandir. Pas besoin d'être expert, juste d'avoir envie de contribuer à rendre la géopolitique accessible à tous.
+                    </p>
+                </div>
+                
+                <div class="positions-grid">
+                    <div class="position-card">
+                        <h3>Secrétaire</h3>
+                        <p>Organisation des événements, gestion des adhésions, coordination avec les intervenants. Un rôle clé pour faire fonctionner l'association au quotidien.</p>
+                    </div>
+                    
+                    <div class="position-card">
+                        <h3>Responsable Communication</h3>
+                        <p>Gestion des réseaux sociaux, création de contenus attractifs, communication sur nos événements pour faire connaître EPIDEF au plus grand nombre.</p>
+                    </div>
+                    
+                    <div class="position-card">
+                        <h3>Illustrateur·rice</h3>
+                        <p>Création de visuels pour nos événements, infographies pour simplifier les concepts complexes, design des supports de communication de l'association.</p>
+                    </div>
+                    
+                    <div class="position-card">
+                        <h3>Trésorier·ère</h3>
+                        <p>Gestion des finances de l'association, recherche de partenariats, suivi budgétaire pour assurer la pérennité et le développement d'EPIDEF.</p>
+                    </div>
+                </div>
+                
+                <div class="member-cta">
+                    <h3>Devenir Membre d'EPIDEF</h3>
+                    <p>
+                        Rejoignez une communauté de personnes curieuses et engagées ! Que vous soyez étudiant, professionnel, retraité ou simplement passionné par l'actualité internationale, votre perspective nous intéresse.
+                    </p>
+                    <p style="margin-bottom: 32px;">
+                        <strong>Aucune connaissance préalable n'est requise</strong> - juste l'envie d'apprendre et de partager dans un environnement bienveillant et ouvert.
+                    </p>
+                    <a href="#contact" class="btn-primary">Rejoindre la Communauté</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Contact</div>
+                    <h2>Rejoignez l'aventure EPIDEF</h2>
+                    <p class="section-description">
+                        Que vous souhaitiez rejoindre l'équipe, devenir membre, ou simplement en savoir plus, n'hésitez pas à nous contacter. Nous avons hâte de faire votre connaissance !
+                    </p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <div class="contact-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Devenir Membre</h3>
+                            <p>Rejoignez notre communauté et participez à nos événements</p>
+                            <a href="mailto:contact@epidef.org?subject=Candidature%20membre%20EPIDEF&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20devenir%20membre%20d'EPIDEF.%0D%0A%0D%0ACordialement," class="contact-btn">Nous écrire</a>
+                        </div>
+                        
+                        <div class="contact-option">
+                            <div class="contact-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 4H18C19.1 4 20 4.9 20 6V20C20 21.1 19.1 22 18 22H6C4.9 22 4 21.1 4 20V6C4 4.9 4.9 4 6 4H8M16 4V2M16 4V6M8 4V2M8 4V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="8" y="8" width="8" height="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Rejoindre l'Équipe</h3>
+                            <p>Postulez pour un poste à responsabilité dans l'association</p>
+                            <a href="mailto:contact@epidef.org?subject=Candidature%20équipe%20EPIDEF&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20rejoindre%20l'équipe%20d'EPIDEF%20en%20tant%20que%20:%0D%0A%0D%0ACordialement," class="contact-btn">Candidater</a>
+                        </div>
+                        
+                        <div class="contact-option">
+                            <div class="contact-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M19.4 15A1.65 1.65 0 0 0 21 13.09A1.65 1.65 0 0 0 19.4 9A1.65 1.65 0 0 0 21 6.91A1.65 1.65 0 0 0 19.4 3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M4.6 9A1.65 1.65 0 0 0 3 10.91A1.65 1.65 0 0 0 4.6 15A1.65 1.65 0 0 0 3 17.09A1.65 1.65 0 0 0 4.6 21" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Informations</h3>
+                            <p>Posez vos questions ou demandez plus d'informations</p>
+                            <a href="mailto:contact@epidef.org?subject=Demande%20d'information%20EPIDEF&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20:%0D%0A%0D%0ACordialement," class="contact-btn">Nous contacter</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-footer">
+                        <div class="email-highlight">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div>
+                                <h4>Contact direct</h4>
+                                <a href="mailto:contact@epidef.org">contact@epidef.org</a>
                             </div>
                         </div>
+                        <p>Nous vous répondrons dans les plus brefs délais. Toutes les candidatures et demandes sont les bienvenues !</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Stats Section -->
-    <section class="stats-section" id="stats">
-        <div class="stats-container">
-            <h2 class="stats-title animate-on-scroll">Le phishing en chiffres</h2>
-            <div class="stats-grid">
-                <div class="stat-card animate-on-scroll">
-                    <i class="fas fa-exclamation-triangle stat-icon"></i>
-                    <span class="stat-number">91%</span>
-                    <p class="stat-description">des cyberattaques commencent par un email de phishing</p>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <i class="fas fa-euro-sign stat-icon"></i>
-                    <span class="stat-number">4.88M€</span>
-                    <p class="stat-description">coût moyen d'une violation de données en 2024</p>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <i class="fas fa-clock stat-icon"></i>
-                    <span class="stat-number">287</span>
-                    <p class="stat-description">jours en moyenne pour identifier une violation</p>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <i class="fas fa-chart-line stat-icon"></i>
-                    <span class="stat-number">-70%</span>
-                    <p class="stat-description">de réduction des incidents avec une formation régulière</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section" id="features">
-        <div class="features-container">
-            <div class="section-header">
-                <h2 class="section-title animate-on-scroll">Une solution complète et autonome</h2>
-                <p class="section-subtitle animate-on-scroll">
-                    Déployez en quelques minutes une plateforme professionnelle de formation anti-phishing, 
-                    entièrement hébergée sur votre infrastructure.
-                </p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3 class="feature-title">Campagnes de phishing simulées</h3>
-                    <p class="feature-description">
-                        Créez et lancez des campagnes de phishing réalistes avec templates personnalisables. 
-                        Trackez les clics, les saisies de données et mesurez la vigilance de vos équipes.
-                    </p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="feature-title">Formation interactive</h3>
-                    <p class="feature-description">
-                        Modules de formation adaptatifs basés sur les résultats des tests. 
-                        Contenu multimédia, quiz interactifs et parcours personnalisés.
-                    </p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3 class="feature-title">Analytics avancés</h3>
-                    <p class="feature-description">
-                        Tableaux de bord en temps réel, rapports détaillés par département, 
-                        évolution des performances et métriques de sécurité.
-                    </p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3 class="feature-title">Self-hosted sécurisé</h3>
-                    <p class="feature-description">
-                        Déploiement sur votre infrastructure, contrôle total des données, 
-                        conformité RGPD native et intégration avec vos systèmes existants.
-                    </p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <h3 class="feature-title">Gestion centralisée</h3>
-                    <p class="feature-description">
-                        Interface d'administration intuitive, gestion des utilisateurs par groupes, 
-                        intégration LDAP/AD et automatisation des campagnes.
-                    </p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-virus"></i>
-                    </div>
-                    <h3 class="feature-title">Détection intelligente</h3>
-                    <p class="feature-description">
-                        Analyse comportementale, scoring de risque personnalisé et 
-                        alertes automatiques pour les utilisateurs à haut risque.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section" id="process">
-        <div class="process-container">
-            <div class="section-header">
-                <h2 class="section-title animate-on-scroll">Comment ça fonctionne</h2>
-                <p class="section-subtitle animate-on-scroll">
-                    Un processus simple et efficace en 3 étapes pour renforcer la sécurité de votre organisation.
-                </p>
-            </div>
-            <div class="process-grid">
-                <div class="process-step animate-on-scroll">
-                    <div class="process-number">1</div>
-                    <h3 class="process-title">Simuler</h3>
-                    <p class="process-description">
-                        Lancez des campagnes de phishing personnalisées pour tester 
-                        la vigilance de vos collaborateurs en conditions réelles.
-                    </p>
-                </div>
-                <div class="process-step animate-on-scroll">
-                    <div class="process-number">2</div>
-                    <h3 class="process-title">Former</h3>
-                    <p class="process-description">
-                        Les utilisateurs qui tombent dans le piège reçoivent automatiquement 
-                        une formation ciblée adaptée à leur niveau.
-                    </p>
-                </div>
-                <div class="process-step animate-on-scroll">
-                    <div class="process-number">3</div>
-                    <h3 class="process-title">Mesurer</h3>
-                    <p class="process-description">
-                        Suivez l'évolution des performances, générez des rapports 
-                        et optimisez votre stratégie de sécurité.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="demo">
-        <div class="cta-container">
-            <h2 class="cta-title">Prêt à renforcer votre sécurité ?</h2>
-            <p class="cta-description">
-                Rejoignez les centaines d'entreprises qui ont réduit leurs risques cyber 
-                grâce à PhishGuard Pro. Solution open-source, déploiement rapide.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://github.com/Reaper-Official/cyber-prevention-tool" class="btn-primary">
-                    <i class="fab fa-github"></i> Télécharger sur GitHub
-                </a> 
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
+    <footer>
+        <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>PhishGuard Pro</h3>
+                <div class="footer-section">
+                    <h4>EPIDEF</h4>
                     <p>
-                        Solution open-source de formation anti-phishing pour entreprises. 
-                        Sécurisez vos équipes avec des simulations réalistes et une formation adaptative.
+                        Association de sensibilisation aux enjeux géopolitiques et de défense, ouverte à tous les niveaux et tous les profils.
                     </p>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Ressources</h4>
-                    <ul>
-                        <li><a href="https://github.com/Reaper-Official/cyber-prevention-tool">Guide d'installation</a></li>
-                        <li><a href="mailto:reaper@etik.com">Support</a></li>
-                    </ul>
+                    <h4>Nos Valeurs</h4>
+                    <p>• Accessibilité pour tous</p>
+                    <p>• Pédagogie bienveillante</p>
+                    <p>• Échange respectueux</p>
+                    <p>• Curiosité intellectuelle</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Entreprise</h4>
-                    <ul>
-                        <li><a href="mailto:reaper@etik.com">Contact</a></li>
-                    </ul>
+                    <h4>Contact</h4>
+                    <a href="mailto:contact@epidef.org">contact@epidef.org</a>
+                    <p>Paris, France</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Rejoindre</h4>
+                    <a href="#contact">Devenir membre</a>
+                    <a href="#equipe">Rejoindre l'équipe</a>
+                    <a href="#activites">Nos activités</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 PhishGuard Pro. Projet open-source sous licence MIT.</p>
+                <p>&copy; 2024 EPIDEF - Association de sensibilisation aux enjeux géopolitiques et de défense</p>
+                <p style="margin-top: 8px; font-size: 14px; color: rgba(255,255,255,0.6);">
+                    Ouvert à tous • Aucun prérequis • Gratuit
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling
+        // Smooth scrolling pour les liens de navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -913,9 +1037,32 @@
             });
         });
 
-        // Header background on scroll
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer les cartes pour les animer au scroll
+        document.querySelectorAll('.activity-card, .position-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Gestion du header au scroll
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
+            const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
                 header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
@@ -925,179 +1072,16 @@
             }
         });
 
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Counter animation for stats
-        const animateCounter = (element, target, duration = 2000) => {
-            let start = 0;
-            const increment = target / (duration / 16);
-            
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    element.textContent = target + (element.dataset.suffix || '');
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(start) + (element.dataset.suffix || '');
-                }
-            }, 16);
-        };
-
-        // Stats counter animation
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumber = entry.target.querySelector('.stat-number');
-                    if (statNumber && !statNumber.classList.contains('animated')) {
-                        statNumber.classList.add('animated');
-                        const text = statNumber.textContent;
-                        const number = parseInt(text.replace(/\D/g, ''));
-                        const suffix = text.replace(/[\d]/g, '');
-                        statNumber.dataset.suffix = suffix;
-                        statNumber.textContent = '0' + suffix;
-                        animateCounter(statNumber, number);
-                    }
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-card').forEach(card => {
-            statsObserver.observe(card);
-        });
-
-        // Parallax effect for hero background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero::before');
-            if (parallax) {
-                const speed = scrolled * 0.5;
-                parallax.style.transform = `translateY(${speed}px)`;
-            }
-        });
-
-        // Mobile menu toggle (if needed)
-        const createMobileMenu = () => {
-            if (window.innerWidth <= 768) {
-                const nav = document.querySelector('.nav');
-                const navLinks = document.querySelector('.nav-links');
-                
-                if (!document.querySelector('.mobile-menu-btn')) {
-                    const menuBtn = document.createElement('button');
-                    menuBtn.className = 'mobile-menu-btn';
-                    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    menuBtn.style.cssText = `
-                        background: none;
-                        border: none;
-                        color: var(--primary);
-                        font-size: 1.5rem;
-                        cursor: pointer;
-                        display: block;
-                    `;
-                    
-                    menuBtn.addEventListener('click', () => {
-                        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-                        if (navLinks.style.display === 'flex') {
-                            navLinks.style.cssText = `
-                                display: flex;
-                                position: absolute;
-                                top: 100%;
-                                left: 0;
-                                right: 0;
-                                background: white;
-                                flex-direction: column;
-                                padding: 2rem;
-                                box-shadow: var(--shadow-medium);
-                                border-radius: 0 0 20px 20px;
-                            `;
-                        }
-                    });
-                    
-                    nav.appendChild(menuBtn);
-                }
-            }
-        };
-
-        // Initialize mobile menu on load and resize
-        createMobileMenu();
-        window.addEventListener('resize', createMobileMenu);
-
-        // Add loading animation
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-
-        // Enhanced button interactions
-        document.querySelectorAll('.btn-primary, .btn-secondary, .cta-nav').forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px) scale(1.05)';
+        // Animation des options de contact au survol
+        document.querySelectorAll('.contact-option').forEach(option => {
+            option.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
             });
             
-            btn.addEventListener('mouseleave', function() {
+            option.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
             });
-            
-            btn.addEventListener('mousedown', function() {
-                this.style.transform = 'translateY(0) scale(0.98)';
-            });
-            
-            btn.addEventListener('mouseup', function() {
-                this.style.transform = 'translateY(-2px) scale(1.05)';
-            });
         });
-
-        // Feature cards hover effect enhancement
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) rotateY(5deg)';
-                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) rotateY(0deg)';
-            });
-        });
-
-        // Dashboard preview animation
-        const dashboardPreview = document.querySelector('.dashboard-preview');
-        if (dashboardPreview) {
-            setInterval(() => {
-                const metrics = dashboardPreview.querySelectorAll('.metric-value');
-                metrics.forEach(metric => {
-                    const currentValue = parseInt(metric.textContent);
-                    const variation = Math.floor(Math.random() * 5) - 2;
-                    const newValue = Math.max(0, currentValue + variation);
-                    
-                    if (metric.textContent.includes('%')) {
-                        metric.textContent = Math.min(100, newValue) + '%';
-                    } else if (metric.textContent.includes('-')) {
-                        metric.textContent = '-' + Math.abs(newValue) + '%';
-                    } else {
-                        metric.textContent = newValue;
-                    }
-                });
-            }, 3000);
-        }
     </script>
 </body>
 </html>
