@@ -1,4 +1,4 @@
-# 🎣 Système de Prévention au Phishing SelfHosted
+# 🎣 Système de Formation par Sensibilisation au Phishing SelfHosted
 
 <div align="center">
 
