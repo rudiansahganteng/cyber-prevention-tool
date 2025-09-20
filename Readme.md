@@ -53,5 +53,5 @@ Cette plateforme utilise :
 
 1. Cloner le repository :  
    ```bash
-   git clone https://github.com/ton-org/security-awareness-platform.git
+   git clone https://github.com/Reaper-Official/cyber-prevention-tool/security-awareness-platform.git
    cd security-awareness-platform
