@@ -1,4 +1,5 @@
-# 🎣 Système de Formation par Sensibilisation au Phishing SelfHosted
+# ⌨️ PhishGuard Pro  
+Système de Formation par Sensibilisation au Phishing SelfHosted
 
 <div align="center">
 
