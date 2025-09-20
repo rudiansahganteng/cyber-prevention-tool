@@ -16,21 +16,23 @@
 
 ---
 
-## ⚠️ **AVERTISSEMENT - USAGE ÉTHIQUE UNIQUEMENT**
+## ⚠️ AVERTISSEMENT — USAGE ÉTHIQUE UNIQUEMENT
 
-> **🚨 IMPORTANT**: Cette application est exclusivement destinée à la **formation en cybersécurité** au sein d'entreprises. L'utilisation malveillante ou non autorisée est strictement interdite et peut être illégale.
+> **🚨 IMPORTANT** : Cette application est exclusivement destinée à la **formation en cybersécurité** au sein d'entreprises. L'utilisation malveillante ou non autorisée est strictement interdite et peut être illégale.
 
 ### ✅ Usages autorisés
-- Formation interne d'employés à la détection de phishing
-- Sensibilisation à la cybersécurité en entreprise  
-- Tests de sécurité avec accord écrit de la direction
-- Recherche académique en cybersécurité
+
+* Formation interne d'employés à la détection de phishing
+* Sensibilisation à la cybersécurité en entreprise
+* Tests de sécurité avec accord écrit de la direction
+* Recherche académique en cybersécurité
 
 ### ❌ Usages interdits
-- Attaques réelles de phishing
-- Collecte non autorisée de données
-- Usage en dehors du cadre éducatif/professionnel
-- Distribution publique des templates
+
+* Attaques réelles de phishing
+* Collecte non autorisée de données
+* Usage en dehors du cadre éducatif/professionnel
+* Distribution publique des templates
 
 ---
 
@@ -39,19 +41,20 @@
 Le **Simulateur de Phishing Éducatif** est une plateforme complète permettant aux équipes de sécurité de créer, lancer et analyser des campagnes de simulation de phishing à des fins de formation.
 
 ### 🎯 Objectifs
-- **Sensibiliser** les employés aux techniques de phishing
-- **Mesurer** le niveau de vigilance de l'organisation
-- **Former** automatiquement les utilisateurs qui cliquent
-- **Analyser** les résultats avec des rapports détaillés
+
+* **Sensibiliser** les employés aux techniques de phishing
+* **Mesurer** le niveau de vigilance de l'organisation
+* **Former** automatiquement les utilisateurs qui cliquent
+* **Analyser** les résultats avec des rapports détaillés
 
 ### ✨ Fonctionnalités principales
 
-| 🔧 **Administration** | 📊 **Analytics** | 🎓 **Formation** |
-|--|--|--|
-| Interface de création de campagnes | Dashboard temps réel | Module de formation automatique |
-| Bibliothèque de templates | Statistiques détaillées | Pages éducatives interactives |
-| Gestion des cibles | Tracking invisible | Notifications de sensibilisation |
-| Planification d'envoi | Exports de rapports | Ressources pédagogiques |
+| 🔧 **Administration**              | 📊 **Analytics**        | 🎓 **Formation**                 |
+| ---------------------------------- | ----------------------- | -------------------------------- |
+| Interface de création de campagnes | Dashboard temps réel    | Module de formation automatique  |
+| Bibliothèque de templates          | Statistiques détaillées | Pages éducatives interactives    |
+| Gestion des cibles                 | Tracking invisible      | Notifications de sensibilisation |
+| Planification d'envoi              | Exports de rapports     | Ressources pédagogiques          |
 
 ### 🏗️ Architecture technique
 
@@ -85,17 +88,15 @@ graph TB
 
 ### 📋 Prérequis
 
-| Composant | Version minimale | Recommandée |
-|-----------|------------------|-------------|
-| **Node.js** | 18.0+ | 20.0+ |
-| **npm** | 8.0+ | 10.0+ |
-| **PostgreSQL** | 14.0+ | 15.0+ |
-| **Git** | 2.0+ | Dernière |
-| **Docker** (optionnel) | 20.0+ | Dernière |
+| Composant              | Version minimale | Recommandée |
+| ---------------------- | ---------------- | ----------- |
+| **Node.js**            | 18.0+            | 20.0+       |
+| **npm**                | 8.0+             | 10.0+       |
+| **PostgreSQL**         | 14.0+            | 15.0+       |
+| **Git**                | 2.0+             | Dernière    |
+| **Docker** (optionnel) | 20.0+            | Dernière    |
 
 ### 🎬 Installation automatique (Recommandée)
-
-La méthode la plus simple pour installer le simulateur :
 
 ```bash
 # 1. Télécharger le script d'installation
@@ -109,11 +110,12 @@ chmod +x setup.sh
 ```
 
 Le script va automatiquement :
-- ✅ Vérifier les prérequis
-- ✅ Créer la structure du projet
-- ✅ Installer toutes les dépendances
-- ✅ Configurer la base de données
-- ✅ Initialiser le repository Git
+
+* ✅ Vérifier les prérequis
+* ✅ Créer la structure du projet
+* ✅ Installer toutes les dépendances
+* ✅ Configurer la base de données
+* ✅ Initialiser le repository Git
 
 ### 🔧 Installation manuelle
 
@@ -199,12 +201,13 @@ RATE_LIMIT_MAX=100
 
 ### 📧 Configuration SMTP
 
-Pour envoyer les emails de simulation, configurez un service SMTP :
+Pour envoyer les emails de simulation, configurez un service SMTP.
 
 <details>
 <summary>📮 Exemples de configuration SMTP</summary>
 
 #### Gmail (avec mot de passe d'application)
+
 ```env
 SMTP_HOST="smtp.gmail.com"
 SMTP_PORT=587
@@ -214,6 +217,7 @@ SMTP_PASS="mot_de_passe_application"
 ```
 
 #### Microsoft 365
+
 ```env
 SMTP_HOST="smtp.office365.com"
 SMTP_PORT=587
@@ -223,6 +227,7 @@ SMTP_PASS="votre_mot_de_passe"
 ```
 
 #### SendGrid
+
 ```env
 SMTP_HOST="smtp.sendgrid.net"
 SMTP_PORT=587
@@ -279,9 +284,10 @@ docker-compose logs -f
 ```
 
 **URLs une fois démarré :**
-- 🌐 **Frontend** : http://localhost:3000
-- 🔧 **Backend API** : http://localhost:3001
-- 💾 **Health Check** : http://localhost:3001/health
+
+* 🌐 **Frontend** : [http://localhost:3000](http://localhost:3000)
+* 🔧 **Backend API** : [http://localhost:3001](http://localhost:3001)
+* 💾 **Health Check** : [http://localhost:3001/health](http://localhost:3001/health)
 
 ### 🛠️ En développement local
 
@@ -302,24 +308,27 @@ npm start
 
 ### 🔍 Vérification de l'installation
 
-1. **Backend** : Aller sur http://localhost:3001/health
-   ```json
-   {
-     "status": "OK",
-     "message": "Simulateur de phishing éducatif actif",
-     "timestamp": "2024-12-20T10:30:00.000Z"
-   }
-   ```
+1. **Backend** : Aller sur [http://localhost:3001/health](http://localhost:3001/health)
 
-2. **Frontend** : Aller sur http://localhost:3000
-   - Interface de connexion visible
-   - Pas d'erreurs dans la console
+```json
+{
+  "status": "OK",
+  "message": "Simulateur de phishing éducatif actif",
+  "timestamp": "2024-12-20T10:30:00.000Z"
+}
+```
 
-3. **Base de données** : 
-   ```bash
-   cd backend
-   npx prisma studio
-   ```
+2. **Frontend** : Aller sur [http://localhost:3000](http://localhost:3000)
+
+* Interface de connexion visible
+* Pas d'erreurs dans la console
+
+3. **Base de données** :
+
+```bash
+cd backend
+npx prisma studio
+```
 
 ---
 
@@ -327,12 +336,10 @@ npm start
 
 ### 👥 Comptes par défaut
 
-Une fois l'application démarrée, vous pouvez vous connecter avec :
-
-| Rôle | Email | Mot de passe | Permissions |
-|------|-------|--------------|-------------|
-| **Admin** | `admin@test.com` | `admin123` | Toutes les fonctionnalités |
-| **Utilisateur** | `user@test.com` | `user123` | Création de campagnes |
+| Rôle            | Email            | Mot de passe | Permissions                |
+| --------------- | ---------------- | ------------ | -------------------------- |
+| **Admin**       | `admin@test.com` | `admin123`   | Toutes les fonctionnalités |
+| **Utilisateur** | `user@test.com`  | `user123`    | Création de campagnes      |
 
 > 🔐 **Sécurité** : Changez ces mots de passe en production !
 
@@ -364,10 +371,10 @@ sequenceDiagram
 
 ### 📈 Analyser les résultats
 
-- **Dashboard** : Vue d'ensemble en temps réel
-- **Détails campagne** : Tracking individuel par cible  
-- **Rapports** : Export CSV/PDF pour présentation
-- **Timeline** : Évolution des clics dans le temps
+* **Dashboard** : Vue d'ensemble en temps réel
+* **Détails campagne** : Tracking individuel par cible
+* **Rapports** : Export CSV/PDF pour présentation
+* **Timeline** : Évolution des clics dans le temps
 
 ---
 
@@ -432,14 +439,14 @@ TrackingTokens -> Tokens de suivi uniques
 
 ### 🛡️ Mesures de protection intégrées
 
-| Composant | Protection |
-|-----------|------------|
-| **API** | Rate limiting, validation des entrées, CORS configuré |
-| **Authentification** | JWT avec expiration, mots de passe hachés (bcrypt) |
-| **Base de données** | Requêtes préparées (Prisma), pas de SQL raw |
-| **Frontend** | CSP headers, validation côté client, XSS protection |
-| **Email** | Templates sanitisés, domaines autorisés uniquement |
-| **Logs** | Audit trail complet, logs de sécurité séparés |
+| Composant            | Protection                                            |
+| -------------------- | ----------------------------------------------------- |
+| **API**              | Rate limiting, validation des entrées, CORS configuré |
+| **Authentification** | JWT avec expiration, mots de passe hachés (bcrypt)    |
+| **Base de données**  | Requêtes préparées (Prisma), pas de SQL raw           |
+| **Frontend**         | CSP headers, validation côté client, XSS protection   |
+| **Email**            | Templates sanitisés, domaines autorisés uniquement    |
+| **Logs**             | Audit trail complet, logs de sécurité séparés         |
 
 ### 🔐 Bonnes pratiques de déploiement
 
@@ -457,9 +464,9 @@ FRONTEND_URL="https://phishing-sim.votreentreprise.com"
 
 ### 🚨 Monitoring et alertes
 
-- **Logs de sécurité** : Tentatives de connexion, accès non autorisés
-- **Métriques** : Taux d'erreur, temps de réponse, usage
-- **Alertes** : Échecs d'authentification répétés, pics de trafic
+* **Logs de sécurité** : Tentatives de connexion, accès non autorisés
+* **Métriques** : Taux d'erreur, temps de réponse, usage
+* **Alertes** : Échecs d'authentification répétés, pics de trafic
 
 ---
 
@@ -575,6 +582,7 @@ curl -f http://localhost/health
 <summary>🌩️ AWS / Azure / GCP</summary>
 
 #### AWS (ECS + RDS)
+
 ```bash
 # 1. Créer l'infrastructure
 aws cloudformation deploy --template-file aws-template.yml
@@ -584,6 +592,7 @@ aws ecs update-service --cluster phishing-sim --service backend
 ```
 
 #### Azure (Container Instances)
+
 ```bash
 # 1. Créer le groupe de ressources
 az group create --name phishing-sim-rg --location eastus
@@ -644,12 +653,12 @@ npm run test:coverage     # Couverture de code
 
 ### ✅ Tests manuels
 
-- [ ] **Authentification** : Connexion/déconnexion
-- [ ] **Création campagne** : Workflow complet
-- [ ] **Envoi email** : Réception et tracking
-- [ ] **Formation** : Redirection après clic
-- [ ] **Rapports** : Export des données
-- [ ] **Sécurité** : Rate limiting, validation
+* [ ] **Authentification** : Connexion/déconnexion
+* [ ] **Création campagne** : Workflow complet
+* [ ] **Envoi email** : Réception et tracking
+* [ ] **Formation** : Redirection après clic
+* [ ] **Rapports** : Export des données
+* [ ] **Sécurité** : Rate limiting, validation
 
 ---
 
@@ -714,10 +723,10 @@ npx prisma studio  # Voir table Users
 
 ### 📞 Support
 
-- **Documentation** : Consultez ce README et les commentaires du code
-- **Issues GitHub** : Créez un ticket avec les détails du problème
-- **Logs** : Consultez `backend/logs/app.log` pour le debug
-- **Community** : Partagez vos retours d'expérience
+* **Documentation** : Consultez ce README et les commentaires du code
+* **Issues GitHub** : Créez un ticket avec les détails du problème
+* **Logs** : Consultez `backend/logs/app.log` pour le debug
+* **Community** : Partagez vos retours d'expérience
 
 ---
 
@@ -733,11 +742,11 @@ npx prisma studio  # Voir table Users
 
 ### 🎯 Roadmap
 
-- [ ] **Templates avancés** : Éditeur WYSIWYG, A/B testing
-- [ ] **Intelligence artificielle** : Personnalisation automatique
-- [ ] **Intégrations** : LDAP/Active Directory, SIEM
-- [ ] **Mobile** : Application mobile pour monitoring
-- [ ] **Multi-langue** : Support international
+* [ ] **Templates avancés** : Éditeur WYSIWYG, A/B testing
+* [ ] **Intelligence artificielle** : Personnalisation automatique
+* [ ] **Intégrations** : LDAP/Active Directory, SIEM
+* [ ] **Mobile** : Application mobile pour monitoring
+* [ ] **Multi-langue** : Support international
 
 ---
 
@@ -745,18 +754,20 @@ npx prisma studio  # Voir table Users
 
 **Usage Interne Uniquement**
 
-Cette application est destinée exclusivement à un usage **éducatif et professionnel interne**. 
+Cette application est destinée exclusivement à un usage **éducatif et professionnel interne**.
 
 ### ✅ Autorisations
-- Utilisation en entreprise pour formation
-- Modification pour adaptation aux besoins
-- Déploiement interne sur infrastructure privée
 
-### ❌ Interdictions  
-- Redistribution publique
-- Usage commercial externe
-- Utilisation malveillante
-- Partage des templates de phishing
+* Utilisation en entreprise pour formation
+* Modification pour adaptation aux besoins
+* Déploiement interne sur infrastructure privée
+
+### ❌ Interdictions
+
+* Redistribution publique
+* Usage commercial externe
+* Utilisation malveillante
+* Partage des templates de phishing
 
 ### ⚖️ Responsabilité légale
 
@@ -766,11 +777,9 @@ L'utilisateur est entièrement responsable de l'usage de cette application. Les 
 
 ## 🙏 Remerciements
 
-- **Équipe de développement** : Pour la création de cette plateforme
-- **Community** : Pour les retours et améliorations
-- **Open Source** : Libraries utilisées (React, Node.js, PostgreSQL, etc.)
-
----
+* **Équipe de développement** : Pour la création de cette plateforme
+* **Community** : Pour les retours et améliorations
+* **Open Source** : Libraries utilisées (React, Node.js, PostgreSQL, etc.)
 
 <div align="center">
 
