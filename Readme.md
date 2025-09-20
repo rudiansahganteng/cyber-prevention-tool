@@ -10,8 +10,6 @@
 
 **Plateforme complète de simulation de phishing pour la formation en cybersécurité**
 
-[📚 Documentation](#documentation) • [🚀 Installation](#installation) • [⚙️ Configuration](#configuration) • [🔧 Utilisation](#utilisation)
-
 </div>
 
 ---
