@@ -169,7 +169,7 @@ See full license details in:
 
 ### 🌟 Star this repository if you find it useful! / Mettez une étoile si ce projet vous est utile !
 
-[![GitHub stars](https://img.shields.io/github/stars/Reaper-Official/phishguard-basic.svg?style=social&label=Star)](https://github.com/Reaper-Official/phishguard-basic)
-[![GitHub forks](https://img.shields.io/github/forks/Reaper-Official/phishguard-basic.svg?style=social&label=Fork)](https://github.com/Reaper-Official/phishguard-basic/fork)
+[![GitHub stars](https://img.shields.io/github/stars/Reaper-Official/phishguard-basic.svg?style=social&label=Star)](https://github.com/Reaper-Official/cyber-prevention-tool)
+[![GitHub forks](https://img.shields.io/github/forks/Reaper-Official/phishguard-basic.svg?style=social&label=Fork)](https://github.com/Reaper-Official/cyber-prevention-tool/fork)
 
 </div>
