@@ -1,3 +1,8 @@
+# Déroulé d’une campagne de simulation phishing
+
+## Vue détaillée
+
+```mermaid
 flowchart TD
     A[Connexion administrateur au panel] --> B[Création d'une campagne]
     B --> C{Ciblage}
