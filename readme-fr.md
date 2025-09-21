@@ -253,6 +253,9 @@ Ce projet est sous licence **Usage Interne Uniquement**.
 - ❌ Usage commercial non autorisé
 - ❌ Distribution malveillante
 
+Voir tout les détails de LICENCE ici:
+- [Licence Française](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
+
 ---
 
 ## 🙏 Remerciements
