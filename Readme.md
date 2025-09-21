@@ -1,4 +1,4 @@
-# ⌨️ PhishGuard Pro  
+# ⌨️ PhishGuard BASIC  
 Système de Formation par Sensibilisation au Phishing SelfHosted
 
 <div align="center">
