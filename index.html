@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhishGuard Basic - Formation Anti-Phishing Self-Hosted</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
     <style>
         :root {
             --primary: #0b046d;
@@ -273,6 +274,153 @@
             color: #64748b;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        /* Workflow Section */
+        .workflow-section {
+            background: #f8fafc;
+            padding: 100px 0;
+        }
+
+        .workflow-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .workflow-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid #f1f5f9;
+        }
+
+        .workflow-toggle {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .workflow-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .workflow-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .workflow-toggle.expanded i {
+            transform: rotate(180deg);
+        }
+
+        .workflow-collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .workflow-collapsible.expanded {
+            max-height: none;
+            height: auto;
+            opacity: 1;
+            transition: opacity 0.5s ease 0.1s;
+            overflow: visible;
+        }
+
+        .mermaid-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow: visible;
+            border: 1px solid #e2e8f0;
+            min-height: 600px;
+        }
+
+        .mermaid {
+            text-align: center;
+            overflow: visible;
+        }
+
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+            overflow: visible;
+        }
+
+        .workflow-preview {
+            background: linear-gradient(45deg, rgba(11, 4, 109, 0.05), rgba(245, 158, 11, 0.05));
+            border: 2px dashed var(--secondary);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .workflow-preview h4 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .workflow-preview p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .workflow-steps-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .step-preview {
+            background: white;
+            padding: 1.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .step-preview:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .step-preview i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-preview h5 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-preview span {
+            font-size: 0.8rem;
+            color: #64748b;
         }
 
         /* Stats Section */
@@ -615,6 +763,48 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .workflow-collapsible {
+                padding: 1.5rem;
+                overflow: visible;
+            }
+
+            .mermaid-container {
+                padding: 1rem;
+                overflow: visible;
+                min-height: 500px;
+            }
+
+            .mermaid svg {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .workflow-preview {
+                text-align: center;
+            }
+
+            .workflow-steps-preview {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+
+            .step-preview {
+                padding: 1rem 0.5rem;
+            }
+
+            .step-preview h5 {
+                font-size: 0.8rem;
+            }
+
+            .step-preview span {
+                font-size: 0.7rem;
+            }
+
+            .workflow-toggle {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
         }
 
         /* Animations */
@@ -639,6 +829,30 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Mermaid customization */
+        .mermaid {
+            text-align: center;
+        }
+
+        .workflow-description {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .workflow-description h4 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .workflow-description p {
+            color: #64748b;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -649,6 +863,13 @@
                 <i class="fas fa-shield-alt"></i>
                 PhishGuard Basic
             </a>
+            <ul class="nav-links">
+                <li><a href="#workflow">Processus</a></li>
+                <li><a href="#stats">Statistiques</a></li>
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="#demo">Démo</a></li>
+            </ul>
+            <a href="#demo" class="cta-nav">Essayer maintenant</a>
         </nav>
     </header>
 
@@ -666,7 +887,10 @@
                         Solution self-hosted de simulation et formation anti-phishing. 
                         Testez, formez et mesurez la vigilance de vos équipes en toute sécurité.
                     </p>
-                    
+                    <div class="hero-buttons">
+                        <a href="#workflow" class="btn-primary">Découvrir le processus</a>
+                        <a href="#demo" class="btn-secondary">Voir la démo</a>
+                    </div>
                 </div>
                 <div class="hero-visual">
                     <div class="dashboard-preview">
@@ -695,6 +919,137 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="workflow-section" id="workflow">
+        <div class="workflow-container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Déroulé d'une campagne de sensibilisation</h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Découvrez le processus complet de lancement d'une campagne anti-phishing, 
+                    de la configuration à l'analyse des résultats.
+                </p>
+            </div>
+            
+            <div class="workflow-content animate-on-scroll">
+                <div class="workflow-preview">
+                    <h4><i class="fas fa-sitemap"></i> Processus de campagne intelligent</h4>
+                    <p>
+                        PhishGuard Basic automatise entièrement le processus de sensibilisation, 
+                        de la création des campagnes à l'analyse des résultats. 
+                        Découvrez comment notre workflow optimise votre stratégie de cybersécurité.
+                    </p>
+                    
+                    <div class="workflow-steps-preview">
+                        <div class="step-preview">
+                            <i class="fas fa-play-circle"></i>
+                            <h5>Lancement</h5>
+                            <span>Création et ciblage</span>
+                        </div>
+                        <div class="step-preview">
+                            <i class="fas fa-envelope"></i>
+                            <h5>Simulation</h5>
+                            <span>Envoi d'emails</span>
+                        </div>
+                        <div class="step-preview">
+                            <i class="fas fa-chart-line"></i>
+                            <h5>Analyse</h5>
+                            <span>Suivi des interactions</span>
+                        </div>
+                        <div class="step-preview">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h5>Formation</h5>
+                            <span>Apprentissage adaptatif</span>
+                        </div>
+                        <div class="step-preview">
+                            <i class="fas fa-file-alt"></i>
+                            <h5>Rapport</h5>
+                            <span>Résultats détaillés</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="workflow-toggle" onclick="toggleWorkflow()">
+                    <i class="fas fa-chevron-down"></i>
+                    Voir le processus détaillé
+                </button>
+                
+                <div class="workflow-collapsible" id="workflowDetails">
+                    <div class="mermaid-container">
+                        <div class="mermaid">
+                            flowchart TD
+                                %% Connexion
+                                A([Connexion administrateur]) --> B[Créer une campagne]
+                                
+                                %% Ciblage
+                                B --> C{Choix des destinataires}
+                                C --> C1[Pôle spécifique]
+                                C --> C2[Liste d'employés ciblés]
+                                C --> C3[Tous les employés]
+                                
+                                %% Template
+                                C1 --> D{Sélection du modèle}
+                                C2 --> D
+                                C3 --> D
+                                D --> D1[Template prédéfinie]
+                                D --> D2[Création d'une nouvelle template]
+                                D --> D3[Demande à l'IA]
+                                
+                                %% IA Personnalisation
+                                D3 --> E{IA dispose infos + autorisation ?}
+                                E -->|Oui| E1[Personnalisation par poste et pôle]
+                                E -->|Non| E2[Template standard]
+                                
+                                %% Validation
+                                D1 --> F[Confirmation de la campagne]
+                                D2 --> F
+                                E1 --> F
+                                E2 --> F
+                                
+                                %% Lancement
+                                F --> G[Envoi automatique des e-mails simulés]
+                                
+                                %% Interaction employés
+                                G --> H{Employés reçoivent e-mail}
+                                H --> H1[Cliquent sur le lien]
+                                H --> H2[Ignorent le mail]
+                                
+                                %% Suivi
+                                H1 --> I[Redirection vers page cible définie]
+                                H2 --> K[Analyse : nb d'employés + pôles touchés]
+                                I --> J[Enregistrement du clic]
+                                J --> K
+                                
+                                %% Formation
+                                J --> L[IA génère une formation de sensibilisation]
+                                L --> M{Lecture rapide détectée ?}
+                                M -->|Oui| M1[Administrateur peut demander une formation renforcée par consultant]
+                                M -->|Non| N[Formation validée]
+                                
+                                %% Rapport final
+                                N --> O[IA génère rapport final]
+                                M1 --> O
+                                K --> O
+                                
+                                %% Consultation
+                                O --> P[Rapport consultable via Gestion des campagnes]
+                                P --> Q[Soumission des résultats à la direction]
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-description">
+                        <h4><i class="fas fa-info-circle"></i> Processus intelligent et automatisé</h4>
+                        <p>
+                            Ce workflow illustre la simplicité d'utilisation de PhishGuard Basic. 
+                            L'IA intégrée personnalise automatiquement les campagnes selon les profils des employés, 
+                            génère des formations adaptées et produit des rapports détaillés pour optimiser 
+                            votre stratégie de cybersécurité.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -893,6 +1248,128 @@
     </footer>
 
     <script>
+        // Toggle workflow function
+        function toggleWorkflow() {
+            const workflowDetails = document.getElementById('workflowDetails');
+            const toggleBtn = document.querySelector('.workflow-toggle');
+            
+            if (workflowDetails.classList.contains('expanded')) {
+                workflowDetails.classList.remove('expanded');
+                toggleBtn.classList.remove('expanded');
+                toggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i> Voir le processus détaillé';
+            } else {
+                workflowDetails.classList.add('expanded');
+                toggleBtn.classList.add('expanded');
+                toggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i> Masquer le processus détaillé';
+                
+                // Re-render Mermaid diagram after expansion with proper sizing
+                setTimeout(() => {
+                    const mermaidEl = workflowDetails.querySelector('.mermaid');
+                    if (mermaidEl) {
+                        // Clear existing content and re-render
+                        mermaidEl.removeAttribute('data-processed');
+                        mermaidEl.innerHTML = `
+                            flowchart TD
+                                %% Connexion
+                                A([Connexion administrateur]) --> B[Créer une campagne]
+                                
+                                %% Ciblage
+                                B --> C{Choix des destinataires}
+                                C --> C1[Pôle spécifique]
+                                C --> C2[Liste d'employés ciblés]
+                                C --> C3[Tous les employés]
+                                
+                                %% Template
+                                C1 --> D{Sélection du modèle}
+                                C2 --> D
+                                C3 --> D
+                                D --> D1[Template prédéfinie]
+                                D --> D2[Création d'une nouvelle template]
+                                D --> D3[Demande à l'IA]
+                                
+                                %% IA Personnalisation
+                                D3 --> E{IA dispose infos + autorisation ?}
+                                E -->|Oui| E1[Personnalisation par poste et pôle]
+                                E -->|Non| E2[Template standard]
+                                
+                                %% Validation
+                                D1 --> F[Confirmation de la campagne]
+                                D2 --> F
+                                E1 --> F
+                                E2 --> F
+                                
+                                %% Lancement
+                                F --> G[Envoi automatique des e-mails simulés]
+                                
+                                %% Interaction employés
+                                G --> H{Employés reçoivent e-mail}
+                                H --> H1[Cliquent sur le lien]
+                                H --> H2[Ignorent le mail]
+                                
+                                %% Suivi
+                                H1 --> I[Redirection vers page cible définie]
+                                H2 --> K[Analyse : nb d'employés + pôles touchés]
+                                I --> J[Enregistrement du clic]
+                                J --> K
+                                
+                                %% Formation
+                                J --> L[IA génère une formation de sensibilisation]
+                                L --> M{Lecture rapide détectée ?}
+                                M -->|Oui| M1[Administrateur peut demander une formation renforcée par consultant]
+                                M -->|Non| N[Formation validée]
+                                
+                                %% Rapport final
+                                N --> O[IA génère rapport final]
+                                M1 --> O
+                                K --> O
+                                
+                                %% Consultation
+                                O --> P[Rapport consultable via Gestion des campagnes]
+                                P --> Q[Soumission des résultats à la direction]
+                        `;
+                        
+                        // Re-initialize Mermaid with proper configuration
+                        mermaid.init({
+                            startOnLoad: true,
+                            theme: 'default',
+                            themeVariables: {
+                                primaryColor: '#0b046d',
+                                primaryTextColor: '#ffffff',
+                                primaryBorderColor: '#092b9b',
+                                lineColor: '#6b7280',
+                                secondaryColor: '#f59e0b',
+                                tertiaryColor: '#e2e8f0'
+                            },
+                            flowchart: {
+                                useMaxWidth: true,
+                                htmlLabels: true,
+                                curve: 'basis'
+                            }
+                        }, mermaidEl);
+                    }
+                }, 400);
+            }
+        }
+
+        // Initialize Mermaid
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#0b046d',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#092b9b',
+                lineColor: '#6b7280',
+                secondaryColor: '#f59e0b',
+                tertiaryColor: '#e2e8f0'
+            },
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -976,71 +1453,6 @@
             statsObserver.observe(card);
         });
 
-        // Parallax effect for hero background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero::before');
-            if (parallax) {
-                const speed = scrolled * 0.5;
-                parallax.style.transform = `translateY(${speed}px)`;
-            }
-        });
-
-        // Mobile menu toggle (if needed)
-        const createMobileMenu = () => {
-            if (window.innerWidth <= 768) {
-                const nav = document.querySelector('.nav');
-                const navLinks = document.querySelector('.nav-links');
-                
-                if (!document.querySelector('.mobile-menu-btn')) {
-                    const menuBtn = document.createElement('button');
-                    menuBtn.className = 'mobile-menu-btn';
-                    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    menuBtn.style.cssText = `
-                        background: none;
-                        border: none;
-                        color: var(--primary);
-                        font-size: 1.5rem;
-                        cursor: pointer;
-                        display: block;
-                    `;
-                    
-                    menuBtn.addEventListener('click', () => {
-                        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-                        if (navLinks.style.display === 'flex') {
-                            navLinks.style.cssText = `
-                                display: flex;
-                                position: absolute;
-                                top: 100%;
-                                left: 0;
-                                right: 0;
-                                background: white;
-                                flex-direction: column;
-                                padding: 2rem;
-                                box-shadow: var(--shadow-medium);
-                                border-radius: 0 0 20px 20px;
-                            `;
-                        }
-                    });
-                    
-                    nav.appendChild(menuBtn);
-                }
-            }
-        };
-
-        // Initialize mobile menu on load and resize
-        createMobileMenu();
-        window.addEventListener('resize', createMobileMenu);
-
-        // Add loading animation
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-
         // Enhanced button interactions
         document.querySelectorAll('.btn-primary, .btn-secondary, .cta-nav').forEach(btn => {
             btn.addEventListener('mouseenter', function() {
@@ -1091,6 +1503,86 @@
                     }
                 });
             }, 3000);
+        }
+
+        // Mobile menu functionality
+        const createMobileMenu = () => {
+            if (window.innerWidth <= 768) {
+                const nav = document.querySelector('.nav');
+                const navLinks = document.querySelector('.nav-links');
+                
+                if (!document.querySelector('.mobile-menu-btn')) {
+                    const menuBtn = document.createElement('button');
+                    menuBtn.className = 'mobile-menu-btn';
+                    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    menuBtn.style.cssText = `
+                        background: none;
+                        border: none;
+                        color: var(--primary);
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        display: block;
+                    `;
+                    
+                    menuBtn.addEventListener('click', () => {
+                        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                        if (navLinks.style.display === 'flex') {
+                            navLinks.style.cssText = `
+                                display: flex;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                right: 0;
+                                background: white;
+                                flex-direction: column;
+                                padding: 2rem;
+                                box-shadow: var(--shadow-medium);
+                                border-radius: 0 0 20px 20px;
+                            `;
+                        }
+                    });
+                    
+                    nav.appendChild(menuBtn);
+                }
+            }
+        };
+
+        // Initialize mobile menu on load and resize
+        createMobileMenu();
+        window.addEventListener('resize', createMobileMenu);
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Workflow section special animation
+        const workflowSection = document.querySelector('.workflow-section');
+        const workflowObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add special animation for workflow diagram
+                    const mermaidContainer = entry.target.querySelector('.mermaid-container');
+                    if (mermaidContainer) {
+                        setTimeout(() => {
+                            mermaidContainer.style.transform = 'scale(1.02)';
+                            mermaidContainer.style.transition = 'transform 0.5s ease';
+                            
+                            setTimeout(() => {
+                                mermaidContainer.style.transform = 'scale(1)';
+                            }, 500);
+                        }, 300);
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (workflowSection) {
+            workflowObserver.observe(workflowSection);
         }
     </script>
 </body>
