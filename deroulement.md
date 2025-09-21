@@ -56,7 +56,7 @@ flowchart TD
     K --> O
     
     %% Consultation
-    O --> P[Rapport consultable via "Gestion des campagnes"]
+    O --> P[Rapport consultable via Gestion des campagnes]
     P --> Q[Soumission des résultats à la direction]
 ```
 
