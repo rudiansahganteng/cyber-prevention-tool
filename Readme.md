@@ -149,8 +149,8 @@ Guide d'installation complet, aperçu des fonctionnalités et instructions de co
 This project is licensed under **Internal Use Only** / Ce projet est sous licence **Usage Interne Uniquement**.
 
 See full license details in:
-- [English License](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/readme-eng.md#-license)
-- [Licence Française](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/readme-fr.md#-license)
+- [English License](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
+- [Licence Française](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
 
 ---
 
