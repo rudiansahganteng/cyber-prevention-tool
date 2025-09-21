@@ -2,34 +2,102 @@
 
 (Internal Use Only License)
 
-🇫🇷 Français
+🇫🇷 Licence — Version Française
+Préambule
 
-Ce logiciel est fourni gratuitement mais est réservé à un usage interne uniquement.
+Le présent logiciel (« le Logiciel ») est mis à disposition par son auteur à titre gratuit.
+Il est destiné exclusivement à un usage interne au sein de l’organisation qui l’installe et l’exploite.
+En accédant, installant ou utilisant le Logiciel, vous acceptez expressément les conditions énoncées ci-dessous.
 
-❌ Il est interdit de redistribuer, vendre, louer, prêter ou héberger publiquement ce logiciel.
+Article 1 — Objet
 
-✅ Il peut être utilisé librement au sein de l’organisation qui l’a installé, pour des besoins internes (formation, sensibilisation, audits internes).
+La présente licence a pour objet de définir les conditions d’utilisation du Logiciel dans le cadre d’un usage interne, non commercial, limité à la sensibilisation, la formation et les activités internes de sécurité informatique.
 
-❌ Il est interdit de l’utiliser pour fournir des services commerciaux ou comme produit SaaS.
+Article 2 — Droits accordés
 
-✅ Les modifications sont autorisées, mais doivent rester pour un usage interne et ne peuvent pas être redistribuées.
+L’Organisation est autorisée à installer, exécuter et utiliser le Logiciel à des fins internes uniquement.
 
-❌ Aucune garantie n’est fournie. L’utilisation se fait à vos risques et périls.
+L’Organisation peut modifier le Logiciel si nécessaire, à condition que ces modifications restent destinées à un usage strictement interne.
 
-En utilisant ce logiciel, vous acceptez ces conditions.
+L’utilisation du Logiciel est limitée au personnel et aux prestataires internes de l’Organisation.
 
-🇬🇧 English
+Article 3 — Restrictions
 
-This software is provided free of charge but is restricted to internal use only.
+Toute redistribution, revente, mise à disposition publique, hébergement externe, commercialisation directe ou indirecte est strictement interdite.
 
-❌ Redistribution, sale, rental, lending, or public hosting of this software is prohibited.
+Le Logiciel ne peut en aucun cas être utilisé pour fournir des services commerciaux, notamment en mode SaaS (Software as a Service), service managé ou prestation externe.
 
-✅ It may be used freely within the organization that installed it, for internal purposes (training, awareness, internal audits).
+Les modifications, extensions ou adaptations du Logiciel ne peuvent pas être publiées, distribuées ou partagées en dehors de l’Organisation.
 
-❌ It may not be used to provide commercial services or as part of a SaaS offering.
+Article 4 — Confidentialité et conformité
 
-✅ Modifications are allowed, but must remain for internal use only and may not be redistributed.
+L’Organisation doit veiller à ce que l’utilisation du Logiciel respecte les lois applicables, y compris la législation sur la protection des données personnelles (ex. RGPD).
 
-❌ No warranty is provided. Use it at your own risk.
+Le Logiciel ne doit pas être utilisé pour collecter ou traiter des données sensibles en dehors du cadre strictement éducatif et interne prévu.
 
-By using this software, you agree to these terms.
+Article 5 — Propriété intellectuelle
+
+Le Logiciel reste la propriété exclusive de son auteur. Aucun droit de propriété intellectuelle n’est transféré à l’Organisation par la présente licence, à l’exception du droit limité d’utilisation décrit ci-dessus.
+
+Article 6 — Absence de garantie
+
+Le Logiciel est fourni « tel quel », sans aucune garantie explicite ou implicite, y compris mais sans s’y limiter les garanties de qualité marchande, d’adéquation à un usage particulier ou de non-contrefaçon.
+L’utilisation du Logiciel se fait aux risques et périls de l’Organisation.
+
+Article 7 — Limitation de responsabilité
+
+En aucun cas l’auteur ne pourra être tenu responsable des dommages directs, indirects, accessoires ou consécutifs résultant de l’utilisation ou de l’impossibilité d’utilisation du Logiciel.
+
+Article 8 — Durée
+
+La présente licence est accordée pour une durée indéterminée, tant que l’Organisation respecte les termes ci-dessus. Tout manquement entraîne la résiliation immédiate et automatique du droit d’usage.
+
+🇬🇧 License — English Version
+Preamble
+
+This software (“the Software”) is made available by its author free of charge.
+It is intended solely for internal use within the organization that installs and operates it.
+By accessing, installing, or using the Software, you expressly agree to the terms set forth below.
+
+Article 1 — Purpose
+
+The purpose of this license is to define the conditions of use of the Software within the scope of internal, non-commercial activities, limited to awareness, training, and internal IT security practices.
+
+Article 2 — Granted Rights
+
+The Organization is authorized to install, run, and use the Software for internal purposes only.
+
+The Organization may modify the Software if necessary, provided that such modifications remain strictly for internal use.
+
+The use of the Software is restricted to the Organization’s personnel and internal contractors.
+
+Article 3 — Restrictions
+
+Redistribution, resale, public hosting, external provision, or direct/indirect commercialization is strictly prohibited.
+
+The Software may not be used to provide commercial services, including but not limited to SaaS (Software as a Service), managed services, or external consulting offerings.
+
+Any modifications, extensions, or adaptations of the Software may not be published, distributed, or shared outside of the Organization.
+
+Article 4 — Compliance and Data Protection
+
+The Organization must ensure that the use of the Software complies with all applicable laws, including personal data protection regulations (e.g., GDPR).
+
+The Software must not be used to collect or process sensitive data beyond the strictly educational and internal scope intended.
+
+Article 5 — Intellectual Property
+
+The Software remains the exclusive property of its author. No intellectual property rights are transferred to the Organization under this license, except for the limited right of use as described above.
+
+Article 6 — Disclaimer of Warranty
+
+The Software is provided “as is”, without any express or implied warranty, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+Use of the Software is at the Organization’s own risk.
+
+Article 7 — Limitation of Liability
+
+In no event shall the author be held liable for any direct, indirect, incidental, or consequential damages arising from the use of, or inability to use, the Software.
+
+Article 8 — Term
+
+This license is granted for an indefinite period, as long as the Organization complies with the terms above. Any breach will result in immediate and automatic termination of the right to use the Software.
