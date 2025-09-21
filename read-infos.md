@@ -4,11 +4,6 @@
 
 **PhishGuard BASIC** est livré avec tout préconfigré pour un déploiement automatique en 3 commandes :
 
-```bash
-git clone https://github.com/Reaper-Official/phishguard-basic.git
-cd phishguard-basic
-./install.sh
-```
 
 ## 🎯 Architecture All-in-One
 
