@@ -1,8 +1,3 @@
-# Déroulé d’une campagne de simulation phishing
-
-## Vue détaillée
-
-```mermaid
 flowchart TD
     A[Connexion administrateur au panel] --> B[Création d'une campagne]
     B --> C{Ciblage}
@@ -37,5 +32,5 @@ flowchart TD
     O --> R[Génération du rapport de campagne]
     Q --> R
 
-    R --> S[Consultation via "Gestion des campagnes"]
+    R --> S[Consultation via menu Gestion des campagnes]
     S --> T[Soumission du rapport à la direction]
