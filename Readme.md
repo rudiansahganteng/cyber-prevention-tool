@@ -23,8 +23,8 @@ Cette plateforme open-source permet aux entreprises de former et sensibiliser le
 
 L’objectif principal est **éducatif** et **contrôlé** : toutes les campagnes et simulations doivent être validées par les équipes sécurité et RH avant diffusion.
 
-Cette plateforme utilise :  
-- **Gemini** comme modèle IA pour créer automatiquement:
+Cette plateforme utilise **Gemini** comme modèle IA pour créer automatiquement:
+  
 -    -> les messages pour les campagnes adaptés à chaque utilisateurs
 -    -> utilisé aussi pour générer automatiquement des contenus pédagogiques adapté à la personne
 -    -> fiches de formation adapté à la personne et création de rapports précis et PRO
