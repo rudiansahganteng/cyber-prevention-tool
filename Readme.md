@@ -1,5 +1,5 @@
-# ⌨️ PhishGuard BASIC  
-Système de Formation par Sensibilisation au Phishing SelfHosted
+# ⌨️ PhishGuard BASIC 
+## Phishing Awareness Training System - Self-Hosted
 
 <div align="center">
 
@@ -7,55 +7,169 @@ Système de Formation par Sensibilisation au Phishing SelfHosted
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-blue.svg)](https://postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com/)
-[![License](https://img.shields.io/badge/License-Internal_Use-red.svg)](#licence)
+[![License](https://img.shields.io/badge/License-Internal_Use-red.svg)](#license)
 
-**Plateforme complète de simulation de phishing pour la formation en cybersécurité**
+**Complete phishing simulation platform for cybersecurity training**
 
 </div>
 
 ---
 
-# Security Awareness Platform — Self-Hosted (Éthique)
+## 🌍 Choose Your Language / Choisissez votre langue
 
-## Description
+<div align="center">
 
-Cette plateforme open-source permet aux entreprises de former et sensibiliser leurs employés à la sécurité informatique. Elle est conçue pour fonctionner en **self-hosted**, avec une interface web pour gérer des modules pédagogiques, des campagnes de simulation et des rapports.
+### 📖 Documentation disponible en :
 
-L’objectif principal est **éducatif** et **contrôlé** : toutes les campagnes et simulations doivent être validées par les équipes sécurité et RH avant diffusion.
+| Language | Langue | Documentation |
+|----------|--------|---------------|
+| 🇺🇸 **English** | English | **[📘 Read in English](./readme-eng.md)** |
+| 🇫🇷 **Français** | Français | **[📘 Lire en français](./readme-fr.md)** |
 
-Cette plateforme utilise **Gemini** comme modèle IA pour créer automatiquement:
-  
-- les messages pour les campagnes adaptés à chaque utilisateurs
-- utilisé aussi pour générer automatiquement des contenus pédagogiques adapté à la personne
-- fiches de formation adapté à la personne et création de rapports précis et PRO
-- tout en restant dans un cadre sûr et légal  
+</div>
 
 ---
 
-## Fonctionnalités
+## 🚀 Quick Start
 
-- Gestion des utilisateurs et des rôles (Admin, Reviewer, RH, Employé)
-- Création et gestion de modules de formation interactifs
-- Simulation de scénarios pédagogiques anonymisés (aucune donnée personnelle réelle)
-- Génération automatique de fiches pédagogiques et recommandations via Claude.ai
-- Tableau de bord pour visualiser les KPIs et l’amélioration des performances
-- Export des rapports anonymisés pour suivi et audits internes
+### English Users
+➡️ **[Click here for English documentation](./readme-eng.md)**
 
----
+Complete installation guide, features overview, and configuration instructions in English.
 
-## Principes Éthiques et Sécurité
+### Utilisateurs Français
+➡️ **[Cliquez ici pour la documentation en français](./readme-fr.md)**
 
-1. **Consentement et approbation** : Toutes les campagnes doivent être validées par le responsable sécurité et RH.  
-2. **Aucune donnée sensible** : Ne pas collecter de mots de passe, identifiants ou informations confidentielles.  
-3. **Anonymisation** : Toutes les métriques et logs doivent être anonymisés ou pseudonymisés.  
-4. **Mode sandbox** : Possibilité de tester la plateforme sans envoyer de communications réelles.  
-5. **RGPD & conformité** : Conserver uniquement les données nécessaires et permettre l’accès/suppression selon la législation.
+Guide d'installation complet, aperçu des fonctionnalités et instructions de configuration en français.
 
 ---
 
-## Installation (Self-Hosted)
+## 📋 Overview / Aperçu
 
-1. Cloner le repository :  
-   ```bash
-   git clone https://github.com/Reaper-Official/cyber-prevention-tool/not-defined.git
-   cd security-awareness-platform
+**EN:** PhishGuard BASIC is an open-source, self-hosted platform designed to train employees in cybersecurity through ethical phishing simulations and educational content powered by Gemini AI.
+
+**FR:** PhishGuard BASIC est une plateforme open-source auto-hébergée conçue pour former les employés à la cybersécurité grâce à des simulations de phishing éthiques et du contenu éducatif alimenté par Gemini AI.
+
+---
+
+## ⚡ Key Features / Fonctionnalités Clés
+
+<table>
+<tr>
+<td width="50%">
+
+### 🇺🇸 **English**
+- ✅ **Ethical phishing simulations**
+- ✅ **AI-powered content generation**
+- ✅ **Role-based user management**
+- ✅ **Real-time dashboards**
+- ✅ **GDPR compliant**
+- ✅ **Self-hosted security**
+
+</td>
+<td width="50%">
+
+### 🇫🇷 **Français**
+- ✅ **Simulations de phishing éthiques**
+- ✅ **Génération de contenu par IA**
+- ✅ **Gestion des utilisateurs par rôles**
+- ✅ **Tableaux de bord en temps réel**
+- ✅ **Conformité RGPD**
+- ✅ **Sécurité auto-hébergée**
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛡️ Ethical & Legal Notice / Avis Éthique et Légal
+
+<div align="center">
+
+⚠️ **IMPORTANT DISCLAIMER / AVERTISSEMENT IMPORTANT** ⚠️
+
+</div>
+
+**🇺🇸 English:** This platform is designed **exclusively** for internal corporate cybersecurity training. Any malicious use is strictly prohibited and may result in legal prosecution.
+
+**🇫🇷 Français:** Cette plateforme est conçue **exclusivement** pour la formation interne en cybersécurité d'entreprise. Toute utilisation malveillante est strictement interdite et peut entraîner des poursuites judiciaires.
+
+### ✅ Authorized Use / Usage Autorisé
+- Internal employee training / Formation interne des employés
+- Security awareness campaigns / Campagnes de sensibilisation à la sécurité
+- Controlled security testing / Tests de sécurité contrôlés
+
+### ❌ Prohibited Use / Usage Interdit
+- Real phishing attacks / Vraies attaques de phishing
+- Unauthorized data collection / Collecte de données non autorisée
+- Malicious distribution / Distribution malveillante
+
+---
+
+## 🔧 Technology Stack / Stack Technologique
+
+<div align="center">
+
+| Frontend | Backend | Database | AI | DevOps |
+|----------|---------|----------|-----|--------|
+| React 18+ | Node.js 18+ | PostgreSQL 14+ | Gemini AI | Docker |
+| TypeScript | Express.js | Redis | Natural Language Processing | GitHub Actions |
+| Tailwind CSS | JWT Auth | Prisma ORM | Content Generation | Self-Hosted |
+
+</div>
+
+---
+
+## 📞 Support & Community / Support et Communauté
+
+<div align="center">
+
+| Resource | English | Français |
+|----------|---------|----------|
+| **Documentation** | [📖 English Docs](./readme-eng.md) | [📖 Documentation FR](./readme-fr.md) |
+| **Issues** | [🐛 Report Issues](https://github.com/Reaper-Official/phishguard-basic/issues) | [🐛 Signaler des Problèmes](https://github.com/Reaper-Official/phishguard-basic/issues) |
+| **Discussions** | [💬 Join Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) | [💬 Rejoindre la Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) |
+| **Email** | support@reaper-official.com | support@reaper-official.com |
+
+</div>
+
+---
+
+## 🤝 Contributing / Contribuer
+
+**EN:** We welcome contributions! Please read our [English documentation](./readme-eng.md) for contribution guidelines.
+
+**FR:** Nous accueillons les contributions ! Veuillez lire notre [documentation française](./readme-fr.md) pour les directives de contribution.
+
+---
+
+## 📄 License / Licence
+
+This project is licensed under **Internal Use Only** / Ce projet est sous licence **Usage Interne Uniquement**.
+
+See full license details in:
+- [English License](./readme-eng.md#license)
+- [Licence Française](./readme-fr.md#licence)
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Reaper Official](https://github.com/Reaper-Official)**
+
+*For a safer internet and accessible cybersecurity for everyone*  
+*Pour un internet plus sûr et une cybersécurité accessible à tous*
+
+</div>
+
+---
+
+<div align="center">
+
+### 🌟 Star this repository if you find it useful! / Mettez une étoile si ce projet vous est utile !
+
+[![GitHub stars](https://img.shields.io/github/stars/Reaper-Official/phishguard-basic.svg?style=social&label=Star)](https://github.com/Reaper-Official/phishguard-basic)
+[![GitHub forks](https://img.shields.io/github/forks/Reaper-Official/phishguard-basic.svg?style=social&label=Fork)](https://github.com/Reaper-Official/phishguard-basic/fork)
+
+</div>
