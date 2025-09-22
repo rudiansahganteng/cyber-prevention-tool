@@ -128,9 +128,9 @@ This project is licensed under **Internal Use Only**.
 - For Internal employee training
 - For Authorized security testing
 - For Internal security audits
-- Don't for Real phishing attacks
-- Don't for Unauthorized commercial use
-- Don't for Malicious distribution
+- Not for Real phishing attacks
+- Not for Unauthorized commercial use
+- Not for Malicious distribution
 
 See full license details in:
 - [English License](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
