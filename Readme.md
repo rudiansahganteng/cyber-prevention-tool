@@ -19,7 +19,7 @@
 
 <div align="center">
 
-### 📖 Documentation disponible en :
+### Documentation disponible en :
 
 | Language | Langue | Documentation |
 |----------|--------|---------------|
