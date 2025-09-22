@@ -32,41 +32,41 @@ Cette plateforme utilise **Gemini AI** comme modèle d'intelligence artificielle
 
 ---
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-### 👥 Gestion des Utilisateurs
+### Gestion des Utilisateurs
 - **Système de rôles** : Admin, Reviewer, RH, Employé
 - **Interface intuitive** pour la gestion des profils
 - **Authentification sécurisée** avec gestion des permissions
 
-### 📚 Modules de Formation
+### Modules de Formation
 - **Création interactive** de contenus pédagogiques
 - **Parcours personnalisés** selon le poste et les besoins
 - **Suivi des progrès** et évaluation des connaissances
 
-### 🎯 Simulations Pédagogiques
+### Simulations Pédagogiques
 - **Scénarios réalistes** sans données personnelles réelles
 - **Tests d'hameçonnage** contrôlés et éthiques
 - **Feedback immédiat** après chaque simulation
 
-### 🤖 Intelligence Artificielle
+### Intelligence Artificielle
 - **Génération automatique** de contenus via Gemini AI
 - **Personnalisation** des messages selon le profil utilisateur
 - **Création de rapports** détaillés et professionnels
 
-### 📊 Tableau de Bord
+### Tableau de Bord
 - **Visualisation des KPIs** de sécurité
 - **Métriques d'amélioration** des performances
 - **Graphiques interactifs** et analyses
 
-### 📄 Rapports et Exports
+### Rapports et Exports
 - **Rapports anonymisés** pour audits internes
 - **Exports personnalisables** (PDF, Excel, CSV)
 - **Suivi longitudinal** des progrès
 
 ---
 
-## 🛡️ Principes Éthiques et Sécurité
+## Principes Éthiques et Sécurité
 
 ### 1. **Consentement et Approbation**
 Toutes les campagnes doivent être validées par le responsable sécurité et RH avant diffusion.
@@ -87,129 +87,7 @@ Possibilité de tester la plateforme sans envoyer de communications réelles aux
 - **Droit à l'oubli** : Suppression des données sur demande
 - **Transparence** : Accès aux données personnelles
 
----
-
-## 🚀 Installation (Self-Hosted)
-
-### Prérequis
-- Node.js 18+
-- PostgreSQL 14+
-- Docker (optionnel)
-- Git
-
-### 1. Cloner le Repository
-```bash
-git clone https://github.com/Reaper-Official/cyber-prevention-tool/phishguard-basic.git
-cd phishguard-basic
-```
-
-### 2. Installation des Dépendances
-```bash
-npm install
-cd client && npm install
-cd ../server && npm install
-```
-
-### 3. Configuration de la Base de Données
-```bash
-# Créer la base de données PostgreSQL
-createdb phishguard_db
-
-# Copier le fichier de configuration
-cp .env.example .env
-
-# Éditer les variables d'environnement
-nano .env
-```
-
-### 4. Configuration Gemini AI
-```bash
-# Ajouter votre clé API Gemini dans .env
-GEMINI_API_KEY=votre_cle_api_gemini
-GEMINI_MODEL=gemini-pro
-```
-
-### 5. Lancement de l'Application
-```bash
-# Mode développement
-npm run dev
-
-# Mode production
-npm run build
-npm start
-```
-
-### 6. Installation avec Docker (Optionnel)
-```bash
-docker-compose up -d
-```
-
----
-
-## 📖 Utilisation
-
-### Configuration Initiale
-1. **Accédez** à `http://localhost:3000`
-2. **Créez** le compte administrateur principal
-3. **Configurez** les paramètres de sécurité
-4. **Importez** vos utilisateurs (CSV supporté)
-
-### Création d'une Campagne
-1. **Sélectionnez** le type de simulation
-2. **Définissez** les paramètres de la campagne
-3. **Générez** le contenu avec Gemini AI
-4. **Faites valider** par RH/Sécurité
-5. **Lancez** la campagne
-
-### Suivi et Analyse
-1. **Consultez** le tableau de bord en temps réel
-2. **Analysez** les résultats par département
-3. **Exportez** les rapports pour management
-4. **Planifiez** les formations complémentaires
-
----
-
-## 🔧 Configuration Avancée
-
-### Variables d'Environnement
-```env
-# Base de données
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=phishguard_db
-DB_USER=phishguard
-DB_PASS=votre_mot_de_passe
-
-# Sécurité
-JWT_SECRET=votre_secret_jwt
-BCRYPT_ROUNDS=12
-SESSION_TIMEOUT=3600
-
-# Gemini AI
-GEMINI_API_KEY=votre_cle_api
-GEMINI_MODEL=gemini-pro
-AI_MAX_TOKENS=1000
-
-# Email (SMTP)
-SMTP_HOST=smtp.votre-domaine.com
-SMTP_PORT=587
-SMTP_USER=noreply@votre-domaine.com
-SMTP_PASS=mot_de_passe_smtp
-
-# Application
-NODE_ENV=production
-PORT=3000
-BASE_URL=https://phishguard.votre-domaine.com
-```
-
-### Personnalisation
-- **Thèmes** : Modifiez les CSS dans `/client/src/styles/`
-- **Templates** : Personnalisez les emails dans `/server/templates/`
-- **Langues** : Ajoutez vos traductions dans `/client/src/i18n/`
-
----
-
-## 🤝 Contribution
+## Contribution
 
 ### Comment Contribuer
 1. **Fork** le projet
@@ -226,7 +104,7 @@ BASE_URL=https://phishguard.votre-domaine.com
 
 ---
 
-## 📞 Support
+## Support
 
 ### Documentation
 - **Wiki** : [Documentation complète](https://github.com/Reaper-Official/phishguard-basic/wiki)
@@ -243,24 +121,24 @@ BASE_URL=https://phishguard.votre-domaine.com
 
 Ce projet est sous licence **Usage Interne Uniquement**. 
 
-⚠️ **Important** : Cette plateforme est conçue exclusivement pour un usage interne en entreprise à des fins de formation en cybersécurité. Toute utilisation malveillante est strictement interdite et peut entraîner des poursuites judiciaires.
+**Important** : Cette plateforme est conçue exclusivement pour un usage interne en entreprise à des fins de formation en cybersécurité. Toute utilisation malveillante est strictement interdite et peut entraîner des poursuites judiciaires.
 
 ### Conditions d'Utilisation
-- ✅ Formation interne des employés
-- ✅ Tests de sécurité autorisés
-- ✅ Audits internes de sécurité
-- ❌ Attaques réelles de phishing
-- ❌ Usage commercial non autorisé
-- ❌ Distribution malveillante
+- Pour: Formation interne des employés
+- Pour: Tests de sécurité autorisés
+- Pour: Audits internes de sécurité
+- Non pour: Attaques réelles de phishing
+- Non pour: Usage commercial non autorisé
+- Non pour: Distribution malveillante
 
 Voir tout les détails de LICENCE ici:
 - [Licence Française](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
 
 ---
 
-## 🙏 Remerciements
+## Remerciements
 
-- **Google Gemini AI** pour l'intelligence artificielle
+- **Google Gemini AI** pour l'intelligence artificielle ou une autre IA
 - **React Team** pour le framework frontend
 - **Node.js Community** pour l'écosystème backend
 - **PostgreSQL** pour la base de données
