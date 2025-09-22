@@ -17,7 +17,7 @@
 
 # Security Awareness Platform — Self-Hosted (Ethical)
 
-## 📋 Description
+## Description
 
 This open-source platform enables companies to train and educate their employees on cybersecurity. It's designed to run **self-hosted**, with a web interface for managing educational modules, simulation campaigns, and reports.
 
@@ -32,41 +32,41 @@ This platform uses **Gemini AI** as an artificial intelligence model to automati
 
 ---
 
-## ✨ Features
+## Features
 
-### 👥 User Management
+### User Management
 - **Role-based system**: Admin, Reviewer, HR, Employee
 - **Intuitive interface** for profile management
 - **Secure authentication** with permission management
 
-### 📚 Training Modules
+### Training Modules
 - **Interactive creation** of educational content
 - **Personalized paths** based on role and needs
 - **Progress tracking** and knowledge assessment
 
-### 🎯 Educational Simulations
+### Educational Simulations
 - **Realistic scenarios** without real personal data
 - **Controlled phishing tests** that are ethical
 - **Immediate feedback** after each simulation
 
-### 🤖 Artificial Intelligence
-- **Automatic content generation** via Gemini AI
+### Artificial Intelligence
+- **Automatic content generation** via Gemini AI or something else
 - **Message personalization** based on user profile
 - **Detailed report creation** and professional analysis
 
-### 📊 Dashboard
+### Dashboard
 - **Security KPI visualization**
 - **Performance improvement metrics**
 - **Interactive charts** and analytics
 
-### 📄 Reports and Exports
+### Reports and Exports
 - **Anonymized reports** for internal audits
 - **Customizable exports** (PDF, Excel, CSV)
 - **Longitudinal progress tracking**
 
 ---
 
-## 🛡️ Ethical Principles and Security
+##  Ethical Principles and Security
 
 ### 1. **Consent and Approval**
 All campaigns must be validated by security and HR managers before deployment.
@@ -87,129 +87,8 @@ Ability to test the platform without sending real communications to users.
 - **Right to be forgotten**: Data deletion on request
 - **Transparency**: Access to personal data
 
----
 
-## 🚀 Installation (Self-Hosted)
-
-### Prerequisites
-- Node.js 18+
-- PostgreSQL 14+
-- Docker (optional)
-- Git
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/Reaper-Official/cyber-prevention-tool/phishguard-basic.git
-cd phishguard-basic
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-cd client && npm install
-cd ../server && npm install
-```
-
-### 3. Database Configuration
-```bash
-# Create PostgreSQL database
-createdb phishguard_db
-
-# Copy configuration file
-cp .env.example .env
-
-# Edit environment variables
-nano .env
-```
-
-### 4. Gemini AI Configuration
-```bash
-# Add your Gemini API key in .env
-GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-pro
-```
-
-### 5. Launch Application
-```bash
-# Development mode
-npm run dev
-
-# Production mode
-npm run build
-npm start
-```
-
-### 6. Docker Installation (Optional)
-```bash
-docker-compose up -d
-```
-
----
-
-## 📖 Usage
-
-### Initial Setup
-1. **Access** `http://localhost:3000`
-2. **Create** the main administrator account
-3. **Configure** security settings
-4. **Import** your users (CSV supported)
-
-### Creating a Campaign
-1. **Select** the simulation type
-2. **Define** campaign parameters
-3. **Generate** content with Gemini AI
-4. **Get validation** from HR/Security
-5. **Launch** the campaign
-
-### Monitoring and Analysis
-1. **Check** the real-time dashboard
-2. **Analyze** results by department
-3. **Export** reports for management
-4. **Plan** complementary training
-
----
-
-## 🔧 Advanced Configuration
-
-### Environment Variables
-```env
-# Database
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=phishguard_db
-DB_USER=phishguard
-DB_PASS=your_password
-
-# Security
-JWT_SECRET=your_jwt_secret
-BCRYPT_ROUNDS=12
-SESSION_TIMEOUT=3600
-
-# Gemini AI
-GEMINI_API_KEY=your_api_key
-GEMINI_MODEL=gemini-pro
-AI_MAX_TOKENS=1000
-
-# Email (SMTP)
-SMTP_HOST=smtp.your-domain.com
-SMTP_PORT=587
-SMTP_USER=noreply@your-domain.com
-SMTP_PASS=smtp_password
-
-# Application
-NODE_ENV=production
-PORT=3000
-BASE_URL=https://phishguard.your-domain.com
-```
-
-### Customization
-- **Themes**: Modify CSS in `/client/src/styles/`
-- **Templates**: Customize emails in `/server/templates/`
-- **Languages**: Add translations in `/client/src/i18n/`
-
----
-
-## 🤝 Contributing
+##  Contributing
 
 ### How to Contribute
 1. **Fork** the project
@@ -226,7 +105,7 @@ BASE_URL=https://phishguard.your-domain.com
 
 ---
 
-## 📞 Support
+##  Support
 
 ### Documentation
 - **Wiki**: [Complete Documentation](https://github.com/Reaper-Official/phishguard-basic/wiki)
@@ -243,24 +122,24 @@ BASE_URL=https://phishguard.your-domain.com
 
 This project is licensed under **Internal Use Only**.
 
-⚠️ **Important**: This platform is designed exclusively for internal corporate use for cybersecurity training purposes. Any malicious use is strictly prohibited and may result in legal prosecution.
+ **Important**: This platform is designed exclusively for internal corporate use for cybersecurity training purposes. Any malicious use is strictly prohibited and may result in legal prosecution.
 
 ### Terms of Use
-- ✅ Internal employee training
-- ✅ Authorized security testing
-- ✅ Internal security audits
-- ❌ Real phishing attacks
-- ❌ Unauthorized commercial use
-- ❌ Malicious distribution
+- For Internal employee training
+- For Authorized security testing
+- For Internal security audits
+- Don't for Real phishing attacks
+- Don't for Unauthorized commercial use
+- Don't for Malicious distribution
 
 See full license details in:
 - [English License](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
-- **Google Gemini AI** for artificial intelligence
+- **Google Gemini AI** for artificial intelligence or another AI model
 - **React Team** for the frontend framework
 - **Node.js Community** for the backend ecosystem
 - **PostgreSQL** for the database
