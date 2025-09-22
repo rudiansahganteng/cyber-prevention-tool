@@ -17,7 +17,7 @@
 
 # Plateforme de Sensibilisation à la Sécurité — Auto-Hébergée (Éthique)
 
-## 📋 Description
+## Description
 
 Cette plateforme open-source permet aux entreprises de former et sensibiliser leurs employés à la sécurité informatique. Elle est conçue pour fonctionner en **self-hosted**, avec une interface web pour gérer des modules pédagogiques, des campagnes de simulation et des rapports.
 
