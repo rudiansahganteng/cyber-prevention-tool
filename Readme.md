@@ -1,4 +1,4 @@
-# ⌨️ PhishGuard BASIC 
+# PhishGuard BASIC 
 ## Phishing Awareness Training System - Self-Hosted
 
 <div align="center">
@@ -15,7 +15,7 @@
 
 ---
 
-## 🌍 Choose Your Language / Choisissez votre langue
+## Choose Your Language / Choisissez votre langue
 
 <div align="center">
 
@@ -30,21 +30,21 @@
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### English Users
-➡️ **[Click here for English documentation](./readme-eng.md)**
+**[Click here for English documentation](./readme-eng.md)**
 
 Complete installation guide, features overview, and configuration instructions in English.
 
 ### Utilisateurs Français
-➡️ **[Cliquez ici pour la documentation en français](./readme-fr.md)**
+**[Cliquez ici pour la documentation en français](./readme-fr.md)**
 
 Guide d'installation complet, aperçu des fonctionnalités et instructions de configuration en français.
 
 ---
 
-## 📋 Overview / Aperçu
+## Overview / Aperçu
 
 **EN:** PhishGuard BASIC is an open-source, self-hosted platform designed to train employees in cybersecurity through ethical phishing simulations and educational content powered by Gemini AI.
 
@@ -52,30 +52,30 @@ Guide d'installation complet, aperçu des fonctionnalités et instructions de co
 
 ---
 
-## ⚡ Key Features / Fonctionnalités Clés
+## Key Features / Fonctionnalités Clés
 
 <table>
 <tr>
 <td width="50%">
 
 ### 🇺🇸 **English**
-- ✅ **Ethical phishing simulations**
-- ✅ **AI-powered content generation**
-- ✅ **Role-based user management**
-- ✅ **Real-time dashboards**
-- ✅ **GDPR compliant**
-- ✅ **Self-hosted security**
+- **Ethical phishing simulations**
+- **AI-powered content generation**
+- **Role-based user management**
+- **Real-time dashboards**
+- **GDPR compliant**
+- **Self-hosted security**
 
 </td>
 <td width="50%">
 
 ### 🇫🇷 **Français**
-- ✅ **Simulations de phishing éthiques**
-- ✅ **Génération de contenu par IA**
-- ✅ **Gestion des utilisateurs par rôles**
-- ✅ **Tableaux de bord en temps réel**
-- ✅ **Conformité RGPD**
-- ✅ **Sécurité auto-hébergée**
+- **Simulations de phishing éthiques**
+- **Génération de contenu par IA**
+- **Gestion des utilisateurs par rôles**
+- **Tableaux de bord en temps réel**
+- **Conformité RGPD**
+- **Sécurité auto-hébergée**
 
 </td>
 </tr>
@@ -83,11 +83,11 @@ Guide d'installation complet, aperçu des fonctionnalités et instructions de co
 
 ---
 
-## 🛡️ Ethical & Legal Notice / Avis Éthique et Légal
+## Ethical & Legal Notice / Avis Éthique et Légal
 
 <div align="center">
 
-⚠️ **IMPORTANT DISCLAIMER / AVERTISSEMENT IMPORTANT** ⚠️
+**IMPORTANT DISCLAIMER / AVERTISSEMENT IMPORTANT**
 
 </div>
 
@@ -95,19 +95,19 @@ Guide d'installation complet, aperçu des fonctionnalités et instructions de co
 
 **🇫🇷 Français:** Cette plateforme est conçue **exclusivement** pour la formation interne en cybersécurité d'entreprise. Toute utilisation malveillante est strictement interdite et peut entraîner des poursuites judiciaires.
 
-### ✅ Authorized Use / Usage Autorisé
+### Authorized Use / Usage Autorisé
 - Internal employee training / Formation interne des employés
 - Security awareness campaigns / Campagnes de sensibilisation à la sécurité
 - Controlled security testing / Tests de sécurité contrôlés
 
-### ❌ Prohibited Use / Usage Interdit
+### Prohibited Use / Usage Interdit
 - Real phishing attacks / Vraies attaques de phishing
 - Unauthorized data collection / Collecte de données non autorisée
 - Malicious distribution / Distribution malveillante
 
 ---
 
-## 🔧 Technology Stack / Stack Technologique
+## Technology Stack / Stack Technologique
 
 <div align="center">
 
@@ -121,22 +121,22 @@ Guide d'installation complet, aperçu des fonctionnalités et instructions de co
 
 ---
 
-## 📞 Support & Community / Support et Communauté
+## Support & Community / Support et Communauté
 
 <div align="center">
 
 | Resource | English | Français |
 |----------|---------|----------|
-| **Documentation** | [📖 English Docs](./readme-eng.md) | [📖 Documentation FR](./readme-fr.md) |
-| **Issues** | [🐛 Report Issues](https://github.com/Reaper-Official/phishguard-basic/issues) | [🐛 Signaler des Problèmes](https://github.com/Reaper-Official/phishguard-basic/issues) |
-| **Discussions** | [💬 Join Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) | [💬 Rejoindre la Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) |
-| **Email** | support@reaper-official.com | support@reaper-official.com |
+| **Documentation** | [English Docs](./readme-eng.md) | [📖 Documentation FR](./readme-fr.md) |
+| **Issues** | [Report Issues](https://github.com/Reaper-Official/phishguard-basic/issues) | [🐛 Signaler des Problèmes](https://github.com/Reaper-Official/phishguard-basic/issues) |
+| **Discussions** | [Join Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) | [💬 Rejoindre la Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) |
+| **Email** | reaper@etik.com | reaper@etik.com |
 
 </div>
 
 ---
 
-## 🤝 Contributing / Contribuer
+## Contributing / Contribuer
 
 **EN:** We welcome contributions! Please read our [English documentation](./readme-eng.md) for contribution guidelines.
 
