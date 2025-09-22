@@ -23,7 +23,7 @@ This open-source platform enables companies to train and educate their employees
 
 The primary objective is **educational** and **controlled**: all campaigns and simulations must be validated by security and HR teams before deployment.
 
-This platform uses **Gemini AI** as an artificial intelligence model to automatically create:
+This platform uses **Gemini AI** as an artificial intelligence model (or another if you want) to automatically create:
 - Campaign messages tailored to each user
 - Personalized educational content
 - Individual training sheets
