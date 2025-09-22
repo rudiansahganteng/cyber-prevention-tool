@@ -23,8 +23,8 @@
 
 | Language | Langue | Documentation |
 |----------|--------|---------------|
-| 🇺🇸 **English** | English | **[📘 Read in English](./readme-eng.md)** |
-| 🇫🇷 **Français** | Français | **[📘 Lire en français](./readme-fr.md)** |
+| 🇺🇸 **English** | English | **[Read in English](./readme-eng.md)** |
+| 🇫🇷 **Français** | Français | **[Lire en français](./readme-fr.md)** |
 
 </div>
 
@@ -127,9 +127,9 @@ Guide d'installation complet, aperçu des fonctionnalités et instructions de co
 
 | Resource | English | Français |
 |----------|---------|----------|
-| **Documentation** | [English Docs](./readme-eng.md) | [📖 Documentation FR](./readme-fr.md) |
-| **Issues** | [Report Issues](https://github.com/Reaper-Official/phishguard-basic/issues) | [🐛 Signaler des Problèmes](https://github.com/Reaper-Official/phishguard-basic/issues) |
-| **Discussions** | [Join Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) | [💬 Rejoindre la Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) |
+| **Documentation** | [English Docs](./readme-eng.md) | [Documentation FR](./readme-fr.md) |
+| **Issues** | [Report Issues](https://github.com/Reaper-Official/phishguard-basic/issues) | [Signaler des Problèmes](https://github.com/Reaper-Official/phishguard-basic/issues) |
+| **Discussions** | [Join Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) | [Rejoindre la Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) |
 | **Email** | reaper@etik.com | reaper@etik.com |
 
 </div>
