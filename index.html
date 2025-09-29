@@ -64,10 +64,19 @@
             align-items: center;
         }
 
-        .logo img {
-    height: 40px;      /* adapte la taille à ta navbar */
-    display: block;
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #58a6ff;
 }
+.logo img {
+    height: 32px;
+}
+
+
 
 
         .nav-links {
@@ -462,9 +471,8 @@
             <div class="container">
                 <div class="nav-content">
                     <div class="logo">
-  <img src="https://reaper-official.github.io/cyber-prevention-tool/logo.png" alt="Logo">
-  <span>PhishGuard</span>
-</div>
+                      <img src="https://reaper-official.github.io/cyber-prevention-tool/logo.png" alt="Logo"> <span>PhishGuard</span>
+                    </div>
 
                     <div class="nav-links">
                         <a href="#features">Features</a>
